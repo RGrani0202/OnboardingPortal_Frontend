@@ -11,6 +11,7 @@ import CreateItem from './admincomponents/createitem/CreateItem';
 import CreateTemplate from './admincomponents/createtemplate/CreateTemplate';
 import CreateModule from './admincomponents/createmodule/CreateModule';
 import Login from './loginpage/Login';
+import SignUp from './Register/SignUp';
 import User from './User-Component/User';
 import UserTemplate from './User-Component/Usertemplates';
 import UserItem from './User-Component/UserItem';
@@ -20,6 +21,7 @@ import DeleteModule from './admincomponents/deletemodule/DeleteModule';
 import UpdateItem from './admincomponents/updateitem/UpdateItem';
 import UpdateTemplate from './admincomponents/updatetemplate/UpdateTemplate';
 import UpdateModule from './admincomponents/updatemodule/UpdateModule';
+import ChatWithUs from './admincomponents/Chat/ChatWithUs';
 
 function App() {
   const loc=useLocation();
@@ -31,6 +33,7 @@ function App() {
         <Route path='/' element={<AdminPage/>} />
         {/* <Route index element={<Login/>} /> */}
         <Route path="/login" element={<Login />} />
+        <Route path="/signUp" element={<SignUp />} />
         <Route path="/adminnavbar" element={<AdminNavbar />} />
         <Route path="/viewitems" element={<ViewItems />} />
         <Route path="/viewtemplates" element={<ViewTemplates/>} />
@@ -47,7 +50,9 @@ function App() {
         <Route path="deletemodule" element={<DeleteModule/>} />
         <Route path="updateitem"  element={<UpdateItem/>} />
         <Route path="updatetemplate" element={<UpdateTemplate/>} />
-        <Route path="updatemodule" element={<UpdateModule/>} />     
+        <Route path="updatemodule" element={<UpdateModule/>} />  
+        <Route path="/Chat" element={<ChatWithUs/>} />
+
       </Routes>
       <Footer/>
     </div>

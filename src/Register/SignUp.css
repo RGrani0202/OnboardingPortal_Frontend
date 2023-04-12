@@ -9,7 +9,7 @@
     padding-bottom: 1%;
   }
   
-  .loginPage{
+  .Register{
     /* background-color: white; */
     width: 50%;
     margin: 5% auto;
@@ -19,7 +19,7 @@
   
   }
   .size{
-    margin:8% auto;
+    margin:5% auto;
     width: 100%;
   }
   /* .size>div:focus{
@@ -51,6 +51,3 @@
   /* .MuiFormControl-root ,.css-1nrlq1o-MuiFormControl-root{
     border:1px solid rgb(203, 42, 42) !important ;
   } */
-  .register{
-    color: blue;
-  }

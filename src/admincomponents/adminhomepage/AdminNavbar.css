@@ -91,10 +91,11 @@ background-color: rgb(43, 42, 42);
   height: 100%;
   width: 80%;
   /* margin-left: 0; */
-  background-image: url('C:\OnboardingPortal_Frontend\src\assets\mainPage.jpg');
+   background-image: url('C:\DATA2\Onboarding-FE-Final\ChatPortal\src\assets\orangish.jpg'); 
   background-repeat: no-repeat;
   object-fit: contain;
-  background-position: right;
+  background-position: center;
+
 }
 
 .adminDiv2 {

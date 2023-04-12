@@ -13,7 +13,7 @@ const handleClick = () => setClick(!click);
         return (
           <div className="adminPage">
           <div className="adminDiv1">
-            {/* <img src="src\assets\mainPage.jpg" alt="img" /> */}
+            {/* <img src="src\assets\mainPage.png" alt="img" /> */}
           </div>
           <div className="adminDiv2">
           <div className="adminButton color1"  onClick={() => navigate("/viewitems")}><span>ITEMS</span></div>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
 
 .navbar {
-    background-color:  #141413;
+    background-color:  #131314;
     height: 110px;
     display: flex;
     justify-content: center;
@@ -17,6 +17,20 @@
     /* z-index: 20; */
   }
   
+#alert-dialog-title{
+  text-align: center;
+  color: #b61f1f;
+  background-color: #6f7573;
+}
+
+#btn{
+  text-align: center;
+  width: 200px;
+  color: #b61f1f;
+   margin: 0 auto;
+   background-color: #6f7573;
+}
+
   .nav-container {
     display: flex;
     flex-direction: row;
@@ -47,6 +61,10 @@
   .nav-logo>img{
 height: 40px;
 /* margin: 1% auto; */
+  }
+  .chatDialogBox>div>div{
+    height: 400px !important;
+    width: 300px !important;
   }
   
   .nav-menu {
@@ -91,7 +109,7 @@ height: 40px;
   }
   
   .nav-item .active {
-    color: #f37439;
+    color: #f7efec;
     /* border: 1px solid #f37439; */
   }
   
@@ -139,4 +157,11 @@ height: 40px;
       cursor: pointer;
       color: #ffdd40;
     }
+    .headerpara {
+      width: 40%;
+      text-indent: 50px;
+      font-size: 40px;
+    
+    }
+
   }
