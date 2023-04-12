@@ -1,0 +1,13 @@
+#alert-dialog-title{
+    text-align: center;
+    color: #1f1e1e;
+    background-color: #4f0fe4;
+  }
+
+  #button{
+    text-align: center;
+    width: 300px;
+    color: black;
+     margin: 0 auto;
+    background-color: #4f0fe4;
+  }

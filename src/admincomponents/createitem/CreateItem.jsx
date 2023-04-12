@@ -67,7 +67,7 @@ const CreateItem = () => {
         </div>
 
 
-        <Button variant="outlined" className='updateItem submitButton' onClick={handleSubmit}>
+        <Button variant="outlined" className='updateItem submitButton'  color="success" onClick={handleSubmit}>
         Create Item
         </Button>
 

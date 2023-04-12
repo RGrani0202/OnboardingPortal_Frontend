@@ -113,7 +113,7 @@
 .footerDiv {
   bottom: 0;
   left: 0;
-  background-color: black;
+  background-color:blue;
   height: 150px;
   display: flex;
   flex-direction: row;

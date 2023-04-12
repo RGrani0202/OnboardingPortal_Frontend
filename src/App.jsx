@@ -1,6 +1,7 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import {  Routes, Route, useLocation } from 'react-router-dom';
 import Header from './header/Header';
+import Signup from './Signup/Signup';
 import Footer from './footer/Footer';
 import AdminNavbar from './admincomponents/adminhomepage/AdminNavbar';
 import AdminPage from './admincomponents/adminhomepage/AdminPage';
@@ -28,7 +29,10 @@ function App() {
     <div className="app">
     <Header/>
       <Routes>
-        <Route path='/' element={<AdminPage/>} />
+
+        
+        <Route path='/home' element={<AdminPage/>} />
+        <Route path='/signup' element={<Signup/>} />
         {/* <Route index element={<Login/>} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/adminnavbar" element={<AdminNavbar />} />

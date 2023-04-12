@@ -50,7 +50,7 @@ const Login = () => {
     console.log("saved");
     try {
         //pass items to store in database
-        axios.post(apikey, {
+        axios.post(apikey+"?userName="+userName+"&password="+newPassword, {
           userName: userName,
           password: newPassword
         }
@@ -72,7 +72,7 @@ const Login = () => {
 
   useEffect(() => {
     console.log(postvalue);
-    if (postvalue === "login successful") {
+    if (postvalue === "User signIn successfully") {
       console.log(postvalue);
       navigate("/user", {state:"login"});
       setBool(true);
