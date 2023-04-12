@@ -10,7 +10,7 @@ import ViewModules from './admincomponents/viewmodules/ViewModules';
 import CreateItem from './admincomponents/createitem/CreateItem';
 import CreateTemplate from './admincomponents/createtemplate/CreateTemplate';
 import CreateModule from './admincomponents/createmodule/CreateModule';
-import Login from './loginpage/Login';
+import Login from './LoginPage/Login';
 import User from './User-Component/User';
 import UserTemplate from './User-Component/Usertemplates';
 import UserItem from './User-Component/UserItem';
@@ -20,6 +20,8 @@ import DeleteModule from './admincomponents/deletemodule/DeleteModule';
 import UpdateItem from './admincomponents/updateitem/UpdateItem';
 import UpdateTemplate from './admincomponents/updatetemplate/UpdateTemplate';
 import UpdateModule from './admincomponents/updatemodule/UpdateModule';
+import Register from './admincomponents/SignUp/Register';
+import Contactus from './admincomponents/ChatWithUs/Contactus';
 
 function App() {
   const loc=useLocation();
@@ -28,9 +30,10 @@ function App() {
     <div className="app">
     <Header/>
       <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register/>}/>
         <Route path='/' element={<AdminPage/>} />
         {/* <Route index element={<Login/>} /> */}
-        <Route path="/login" element={<Login />} />
         <Route path="/adminnavbar" element={<AdminNavbar />} />
         <Route path="/viewitems" element={<ViewItems />} />
         <Route path="/viewtemplates" element={<ViewTemplates/>} />
@@ -47,7 +50,9 @@ function App() {
         <Route path="deletemodule" element={<DeleteModule/>} />
         <Route path="updateitem"  element={<UpdateItem/>} />
         <Route path="updatetemplate" element={<UpdateTemplate/>} />
-        <Route path="updatemodule" element={<UpdateModule/>} />     
+        <Route path="updatemodule" element={<UpdateModule/>} /> 
+        <Route path="/chat" element={<Contactus/>} />  
+           
       </Routes>
       <Footer/>
     </div>

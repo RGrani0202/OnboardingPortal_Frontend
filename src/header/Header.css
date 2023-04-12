@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
 
 .navbar {
-    background-color:  #141413;
+    background-color: hsl(212, 88%, 3%);
     height: 110px;
     display: flex;
     justify-content: center;
@@ -87,11 +87,11 @@ height: 40px;
   
   .nav-item:hover:after {
     width: 100%;
-    background: #f37439;
+    background: #fcfaf9;
   }
   
   .nav-item .active {
-    color: #f37439;
+    color: #5129b1;
     /* border: 1px solid #f37439; */
   }
   

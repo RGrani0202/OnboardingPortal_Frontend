@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {useNavigate} from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import InputAdornment from '@mui/material/InputAdornment';
 import Visibility from '@mui/icons-material/Visibility';
@@ -49,32 +49,32 @@ const Login = () => {
     e.preventDefault();
     console.log("saved");
     try {
-        //pass items to store in database
-        axios.post(apikey, {
-          userName: userName,
-          password: newPassword
-        }
+      //pass items to store in database
+      axios.post(apikey + "?userName=" + userName + "&password=" + newPassword, {
+        userName: userName,
+        password: newPassword
+      }
         , {
-            headers: {
-                "Content-Type": 'application/json'   
-            }
+          headers: {
+            "Content-Type": 'application/json'
+          }
         }
-        ).then((response) => {
-          console.log(response);
-          setPost(response.data); 
-        });
+      ).then((response) => {
+        console.log(response);
+        setPost(response.data);
+      });
 
     } catch (err) {
-        console.log(err);
+      console.log(err);
     }
-}
+  }
 
 
   useEffect(() => {
     console.log(postvalue);
     if (postvalue === "login successful") {
       console.log(postvalue);
-      navigate("/user", {state:"login"});
+      navigate("/user", { state: "login" });
       setBool(true);
     }
     else {
@@ -111,62 +111,63 @@ const Login = () => {
   return (
 
     <div className="loginPage" align="centre">
-    <Box component="form" className="size"
-      noValidate sx={{ '& > :not(style)': { m: 1 } }}>
-        {incorrectData?<div className="incorrect">Incorrect credentials</div>:<div></div>}
-      <div className="feilds">
-        <FormControl className="size" variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">UserName</InputLabel>
-          <OutlinedInput
-          size='outlinedInput'
-            id="outlined-adornment-password"
-            startAdornment={
-              <InputAdornment position="start">
-                <MailIcon />
-              </InputAdornment>
-            }
-            label="Password"
-            onChange={(event) => {
-              setUserName(event.target.value);
-            }}
-          />
-        </FormControl>
-      </div>
-      <div className="feilds" >
-        <FormControl className="size" variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-          <OutlinedInput
-            id="outlined-adornment-password"
-            type={showPassword ? 'text' : 'password'}
-            startAdornment={
-              <InputAdornment position="start"> <LockIcon /></InputAdornment>
-            }
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-            label="Password"
-            onChange={(event) => {
-              setPassword(event.target.value);
-            }}
-          />
-        </FormControl>
-      </div>
-      <div className="feilds">
-        <Button className="size continue" variant="contained" onClick={handleSubmit} >Login</Button>
-      </div>
+      <Box component="form" className="size"
+        noValidate sx={{ '& > :not(style)': { m: 1 } }}>
+        {incorrectData ? <div className="incorrect">Incorrect credentials</div> : <div></div>}
+        <div className="feilds">
+          <FormControl className="size" variant="outlined">
+            <InputLabel htmlFor="outlined-adornment-password">UserName</InputLabel>
+            <OutlinedInput
+              size='outlinedInput'
+              id="outlined-adornment-password"
+              startAdornment={
+                <InputAdornment position="start">
+                  <MailIcon />
+                </InputAdornment>
+              }
+              label="Password"
+              onChange={(event) => {
+                setUserName(event.target.value);
+              }}
+            />
+          </FormControl>
+        </div>
+        <div className="feilds" >
+          <FormControl className="size" variant="outlined">
+            <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-password"
+              type={showPassword ? 'text' : 'password'}
+              startAdornment={
+                <InputAdornment position="start"> <LockIcon /></InputAdornment>
+              }
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                    onMouseDown={handleMouseDownPassword}
+                    edge="end"
+                  >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              }
+              label="Password"
+              onChange={(event) => {
+                setPassword(event.target.value);
+              }}
+            />
+          </FormControl>
+        </div>
+        <div className="feilds">
+          <Button className="size continue" variant="contained" onClick={handleSubmit} >Login</Button>
+        </div>
+        <NavLink to="/register">New User? Register Here</NavLink>
 
-    </Box>
+      </Box>
 
-  </div>
+    </div>
 
   );
 

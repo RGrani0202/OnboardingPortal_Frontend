@@ -2,7 +2,7 @@ import React from "react";
 import './Header.css';
 import { useState } from "react";
 import { NavLink } from "react-router-dom" ;
-
+import Contactus from "../admincomponents/ChatWithUs/Contactus";
 
 
 
@@ -17,7 +17,7 @@ const handleClick = () => setClick(!click);
             <nav className="navbar">
               <div className="nav-container">
                 <NavLink  to="/" className="nav-logo">
-                 <img src="https://www.mastercard.us/content/dam/public/mastercardcom/mea/za/logos/mc-logo-52.svg" alt="" />
+                 <img src="https://www.logolynx.com/images/logolynx/0b/0bf61bb3ece3d121adb09264efd4a1e4.jpeg" alt="" />
                   {/* <i className="fas fa-code"></i> */}
                 </NavLink>
       
@@ -31,6 +31,10 @@ const handleClick = () => setClick(!click);
                       Home
                     </NavLink>
                   </li>
+
+                  
+
+
                   <li className="nav-item">
                     <NavLink
                      
@@ -44,12 +48,16 @@ const handleClick = () => setClick(!click);
                   <li className="nav-item">
                     <NavLink
                      
-                      to="/blog"
+                      to="/contact"
                       className="nav-links"
                       onClick={handleClick}
                     >
                       AboutUs
                     </NavLink>
+                  </li>
+
+                  <li className="nav-item">
+                  <Contactus/>
                   </li>
                  
                 </ul>
