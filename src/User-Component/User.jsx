@@ -56,6 +56,35 @@ return(
         } )}
         </div>
        
+        <div className="completePage">
+        {getData.map((item) =>{
+            return(
+                <div  key={item.id} className="allCards">
+                <Card sx={{ maxWidth: 345 }} className="cards">
+                <CardActionArea>
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {item.name} 
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                   {item.description}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary">
+                  <Link to="/userTemplate" state= {{ id:item.id}}>
+                  Start
+                 </Link>
+                </Button>
+              </CardActions>
+            </Card> 
+            </div>
+            )
+        } )}
+        </div>
+       
+
 
 
     </div>

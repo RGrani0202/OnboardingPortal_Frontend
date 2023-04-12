@@ -50,7 +50,7 @@ const Login = () => {
     console.log("saved");
     try {
         //pass items to store in database
-        axios.post(apikey, {
+        axios.post(apikey+"?userName="+userName+"&password="+newPassword, {
           userName: userName,
           password: newPassword
         }
@@ -72,7 +72,7 @@ const Login = () => {
 
   useEffect(() => {
     console.log(postvalue);
-    if (postvalue === "login successful") {
+    if (postvalue === "User signeIn successfully") {
       console.log(postvalue);
       navigate("/user", {state:"login"});
       setBool(true);
@@ -161,7 +161,7 @@ const Login = () => {
         </FormControl>
       </div>
       <div className="feilds">
-        <Button className="size continue" variant="contained" onClick={handleSubmit} >Login</Button>
+        <Button className="size continue" variant="contained"  onClick={handleSubmit} >Login</Button>
       </div>
 
     </Box>

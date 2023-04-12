@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import {  Routes, Route, useLocation } from 'react-router-dom';
 import Header from './header/Header';
 import Footer from './footer/Footer';
 import AdminNavbar from './admincomponents/adminhomepage/AdminNavbar';
@@ -20,7 +20,7 @@ import DeleteModule from './admincomponents/deletemodule/DeleteModule';
 import UpdateItem from './admincomponents/updateitem/UpdateItem';
 import UpdateTemplate from './admincomponents/updatetemplate/UpdateTemplate';
 import UpdateModule from './admincomponents/updatemodule/UpdateModule';
-
+import SignupForm from './Signup/signup';
 function App() {
   const loc=useLocation();
   console.log(loc);
@@ -28,10 +28,13 @@ function App() {
     <div className="app">
     <Header/>
       <Routes>
-        <Route path='/' element={<AdminPage/>} />
-        {/* <Route index element={<Login/>} /> */}
+      <Route path='/' element={<SignupForm/>}/>
+        <Route path='/home' element={<AdminPage/>} />
+       { /* <Route index element={<Login/>} /> */}
         <Route path="/login" element={<Login />} />
+
         <Route path="/adminnavbar" element={<AdminNavbar />} />
+        <Route path="/signup" element={<SignupForm/>}/>
         <Route path="/viewitems" element={<ViewItems />} />
         <Route path="/viewtemplates" element={<ViewTemplates/>} />
         <Route path="/viewmodules" element={<ViewModules />} />

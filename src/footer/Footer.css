@@ -113,7 +113,7 @@
 .footerDiv {
   bottom: 0;
   left: 0;
-  background-color: black;
+  background-color: blue;
   height: 150px;
   display: flex;
   flex-direction: row;
@@ -165,7 +165,7 @@
 }
 
 .footerLogo {
-  margin-left: 5%;
-  width: 3%;
+  margin-left: 15%;
+  width: 10%;
 
 }

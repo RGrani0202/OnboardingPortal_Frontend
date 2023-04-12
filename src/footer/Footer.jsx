@@ -7,7 +7,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-
+import Logo from "../assets/supercharging-logo.svg";
 
 
 const Footer = () => {
@@ -18,9 +18,8 @@ const Footer = () => {
 
   return (
     <footer className="footerDiv">
-      <img className="footerLogo" src="https://www.mastercard.us/content/dam/public/mastercardcom/mea/za/logos/mc-logo-52.svg" alt="" />
+      <img className="footerLogo" src= {Logo} alt="" />
 
-      <p className="footerPara">© 1994-2023 Mastercard.</p>
       <div className="footerShareIcon">
         <Link className="shareIcon"><TwitterIcon /></Link>
         <Link className="shareIcon"><FacebookIcon /></Link>
