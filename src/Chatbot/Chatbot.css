@@ -1,0 +1,151 @@
+.chatbot-popup {
+
+  position: fixed;
+  
+   bottom: 0;
+  
+   right: 30px;
+  
+   border-radius: 10px;
+  
+  border: 1px solid #ccc;
+  
+  width: 350px;
+  
+   height: 300px;
+  
+   overflow: hidden;
+  
+   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  
+   transition: transform 0.3s ease-in-out;
+  
+  background-color: white;
+  
+   padding-bottom: 200px;
+  
+   margin-bottom:20px;
+  
+   }
+  
+  
+  
+  .chatbot-popup.closed {
+  
+   transform: translateY(100%);
+  
+   }
+  
+  
+  
+  .chatbot-header {
+  
+  background-color: #f5f5f5;
+  
+   padding: 5px;
+   height: 20px;
+  
+   display: flex;
+  
+   justify-content: space-between;
+  
+  align-items: center;
+  
+  }
+  
+  
+  
+   .close-btn {
+  
+   font-size: 1.5rem;
+  width: 50px;
+  background-color: red;
+  margin-left: 180px;
+   border: none;
+  
+  cursor: pointer;
+  
+  }
+  
+  
+  
+   .chatbot-body {
+  
+   padding: 20px;
+  
+   height: 200px;
+  
+   overflow-y: scroll;
+  
+  color: black;
+  
+   }
+  
+  
+  
+   .chatbot-footer {
+  
+  display: flex;
+  
+  align-items: center;
+  
+  justify-content: space-between;
+  
+   padding: 10px;
+   margin-top:120px;
+  
+  background-color: #f5f5f5;
+  
+   }
+  
+  
+  
+   .chatbot-footer input[type="text"] {
+  
+   flex: 1;
+  
+   padding: 10px;
+  
+   border: none;
+  
+   border-radius: 5px;
+  
+   margin-right: 10px;
+  
+   color:black;
+  
+   }
+  
+  
+  
+   .chatbot-footer button {
+  
+   padding: 10px;
+  
+   background-color: #4CAF50;
+  
+  color: #fff;
+  
+  border: none;
+  
+   border-radius: 5px;
+  
+   cursor: pointer;
+  
+   }
+  
+  
+  
+  #black{
+  
+  color: black; }
+  body{
+    height: 100%;
+    width: 100%;
+     margin-left: 200px;
+    background-image: url("C:\Users\m.balamurugan\Downloads\NEW@FRONTEND\NEW@FRONTEND\src\assets\EmpOnboard.png");
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: right;
+    
+  }
