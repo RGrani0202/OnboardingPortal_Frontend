@@ -17,7 +17,7 @@ const handleClick = () => setClick(!click);
             <nav className="navbar">
               <div className="nav-container">
                 <NavLink  to="/" className="nav-logo">
-                 <img src="https://th.bing.com/th/id/OIP.u9v04IWJIA2E-qEOfMk_MwHaDw?w=306&h=177&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="" />
+                 <img id ='logo' src="https://www.theofficialboard.com/img/twitterCompanyBigImages/69270.jpg" alt="" />
                   {/* <i className="fas fa-code"></i> */}
                 </NavLink>
       
@@ -56,7 +56,7 @@ const handleClick = () => setClick(!click);
                      
                       to="/blog"
                       className="nav-links"
-                      onClick={handleClick}
+                      onClick={() => window.location.href = '/chat'}
                     >
                       Chat with us
                     </NavLink>

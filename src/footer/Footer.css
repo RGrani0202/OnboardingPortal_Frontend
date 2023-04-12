@@ -113,14 +113,18 @@
 .footerDiv {
   bottom: 0;
   left: 0;
-  background-color: black;
-  height: 150px;
+  background-color:  rgba(22, 84, 175, 1.0);
+  background: -webkit-linear-gradient(right, rgba(22, 84, 175, 1.0), rgba(113, 69, 181, 1.0));
+  background: -moz-linear-gradient(right, rgba(22, 84, 175, 1.0), rgba(113, 69, 181, 1.0));
+  background: linear-gradient(to left, rgba(22, 84, 175, 1.0), rgba(113, 69, 181, 1.0));
+  height: 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   color: white;
   font-family: 'Exo 2', sans-serif;
+  
 }
 
 .footerList {
@@ -166,6 +170,7 @@
 
 .footerLogo {
   margin-left: 5%;
-  width: 3%;
+  width: 6%;
+  height: 30px;
 
 }

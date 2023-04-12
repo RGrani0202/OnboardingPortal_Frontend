@@ -18,9 +18,9 @@ const Footer = () => {
 
   return (
     <footer className="footerDiv">
-      <img className="footerLogo" src="https://th.bing.com/th/id/OIP.u9v04IWJIA2E-qEOfMk_MwHaDw?w=306&h=177&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="" />
+      <img className="footerLogo" src="https://th.bing.com/th/id/OIP.JcOARAZA_AE8sdXd9A8iPgHaBH?w=353&h=58&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="" />
 
-      <p className="footerPara">© 1956-2023 HCL TECH.</p>
+      <p className="footerPara">© 1980-2023 HCL TECH.</p>
       <div className="footerShareIcon">
         <Link className="shareIcon"><TwitterIcon /></Link>
         <Link className="shareIcon"><FacebookIcon /></Link>

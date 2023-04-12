@@ -11,6 +11,7 @@ import CreateItem from './admincomponents/createitem/CreateItem';
 import CreateTemplate from './admincomponents/createtemplate/CreateTemplate';
 import CreateModule from './admincomponents/createmodule/CreateModule';
 import Login from './loginpage/Login';
+import Chatbox from './Chatbot/Chatbox';
 import User from './User-Component/User';
 import UserTemplate from './User-Component/Usertemplates';
 import UserItem from './User-Component/UserItem';
@@ -32,6 +33,7 @@ function App() {
         <Route path='/' element={<AdminPage/>} />
         {/* <Route index element={<Login/>} /> */}
         <Route path="/login" element={<Login />} />
+        <Route path="/chat" element={<Chatbox />} />
         <Route path="/signup" element={<Signup/>} />
         <Route path="/adminnavbar" element={<AdminNavbar />} />
         <Route path="/viewitems" element={<ViewItems />} />

@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
 
 .navbar {
-    background-color:  #141413;
+    background-color:  
+     rgba(22, 84, 175, 1.0);
+    background: -webkit-linear-gradient(right, rgba(22, 84, 175, 1.0), rgba(113, 69, 181, 1.0));
+    background: -moz-linear-gradient(right, rgba(22, 84, 175, 1.0), rgba(113, 69, 181, 1.0));
+    background: linear-gradient(to left, rgba(22, 84, 175, 1.0), rgba(113, 69, 181, 1.0));;
     height: 110px;
     display: flex;
     justify-content: center;
@@ -139,4 +143,8 @@ height: 40px;
       cursor: pointer;
       color: #ffdd40;
     }
+  }
+  #logo{
+    height: 100px;
+    width:100px;
   }
