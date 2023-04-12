@@ -91,10 +91,12 @@ background-color: rgb(43, 42, 42);
   height: 100%;
   width: 80%;
   /* margin-left: 0; */
-  background-image: url('C:\OnboardingPortal_Frontend\src\assets\mainPage.jpg');
+  background-image: url('C:\OnboardingPortal_Frontend\NEW@FRONTEND\src\assets\mainPage.png');
   background-repeat: no-repeat;
   object-fit: contain;
-  background-position: right;
+  max-width: 100%;
+  
+  background-position: center;
 }
 
 .adminDiv2 {
@@ -138,16 +140,16 @@ background-color: rgb(43, 42, 42);
 }
 
 .color1 {
-  background-color: rgb(244, 176, 40);
+  background-color: #fff;
   /* border: 2px 2px 0 2px solid white; */
 }
 
 .color2 {
-  background-color: rgb(244, 132, 40);
+  background-color: #fff;
   /* border: 10px solid white; */
 }
 
 .color3 {
-  background-color: rgb(244, 84, 40);
+  background-color: #fff;
   /* border: 0 2px 2px 2px solid white; */
 }
