@@ -8,7 +8,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import PopUp from "../Popup/PopUp";
+import PopUP from "../Chatcompnents/Popup";
 
 
 
@@ -31,8 +31,7 @@ const Header = () => {
       <nav className="navbar">
         <div className="nav-container">
           <NavLink to="/" className="nav-logo">
-            <img src="https://th.bing.com/th/id/R.d8d1c9697efe0197ea71cfe611f4ddd2?rik=oputv6YhG18P8Q&riu=http%3a%2f%2f1.bp.blogspot.com%2f-ZsEnpy0pmPs%2fU4cQJaLcA7I%2fAAAAAAAAAGc%2fvmE_VSriiq4%2fs1600%2fhcl_logo.png&ehk=BE%2fIhFCdT2BosMXRqzZxpOTfdu84BRwBuzQkSCY2cWY%3d&risl=&pid=ImgRaw&r=0" width="2000" 
-     height="2000"alt="" />
+            <img src="https://www.hcltech.com/sites/default/files/images/special-pages/supercharging-progress/supercharging-logo.svg" alt="" />
             {/* <i className="fas fa-code"></i> */}
           </NavLink>
 
@@ -47,15 +46,7 @@ const Header = () => {
                 Home
               </NavLink>
             </li>
-            <PopUp flag={open} handleCallBack={handleClose}/>
-            <li className="nav-item">
-              <NavLink
-                className="nav-links"
-                onClick={handleClickOpen}
-              >
-                Chat With Us
-              </NavLink>
-            </li>
+           
             <li className="nav-item">
               <NavLink
 
@@ -66,16 +57,16 @@ const Header = () => {
                 Menu
               </NavLink>
             </li>
+            <PopUP flag={open} handleCallBack={handleClose}/>
             <li className="nav-item">
               <NavLink
-
-                to="/blog"
                 className="nav-links"
-                onClick={handleClick}
+                onClick={handleClickOpen}
               >
-                AboutUs
+                Chat With Us
               </NavLink>
             </li>
+            
 
           </ul>
           <div className="nav-icon" onClick={handleClick}>

@@ -18,12 +18,11 @@ const Footer = () => {
 
   return (
     <footer className="footerDiv">
-      <img className="footerLogo" src="https://th.bing.com/th/id/R.a2a3dc14c32e5a6e40a4ae3ce37b42f9?rik=%2fjYw7KiD1dcHNg&riu=http%3a%2f%2fgpcalour.com%2fwp-content%2fuploads%2f2017%2f06%2fHCL-1170x568.png&ehk=bAKtYdVlhZd4eub5kPiJca56MbozDsaINfYEAkTDraE%3d&risl=&pid=ImgRaw&r=0"  width="200" 
-     height="30"alt="" />
+      {/* <img className="footerLogo" src="https://www.mastercard.us/content/dam/public/mastercardcom/mea/za/logos/mc-logo-52.svg" alt="" /> */}
 
-      <p className="footerPara">© 1994-2023 HclTech.</p>
+      <p className="footerPara"><b>HCLTech.</b></p>
       <div className="footerShareIcon">
-        <Link  className="shareIcon"><TwitterIcon /></Link>
+        <Link className="shareIcon"><TwitterIcon /></Link>
         <Link className="shareIcon"><FacebookIcon /></Link>
         <Link className="shareIcon"><LinkedInIcon /></Link>
         <Link className="shareIcon"><YouTubeIcon /></Link>
