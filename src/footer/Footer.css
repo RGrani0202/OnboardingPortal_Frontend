@@ -111,7 +111,8 @@
     }
   } */
 .footerDiv {
-  bottom: 0;
+  
+  /* bottom: 0;
   left: 0;
   background-color: black;
   height: 150px;
@@ -120,7 +121,20 @@
   justify-content: space-between;
   align-items: center;
   color: white;
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Exo 2', sans-serif; */
+  
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  min-height: 35px;
+  background: transparent linear-gradient(90deg, #5F1EBE 0%, #2874F0 67%, #0F5FDC 100%) 0% 0% no-repeat;
+  font-size: 20px;
+  color: #fff;
+  padding: 8px 20px;
+  flex-direction: row;
+  justify-content: space-around;
+
+
 }
 
 .footerList {

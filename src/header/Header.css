@@ -1,22 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
 
 .navbar {
-    background-color:  #141413;
-    height: 110px;
+  
+    letter-spacing: 0.5px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-    /* font-family: MarkForMC,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif; */
-    font-family: 'Exo 2', sans-serif;
-    /* position: sticky; */
-    top: 0;
-    /* opacity: 0.1; */
-    z-index: 3;
-    /* position: sticky; */
-    /* z-index: 20; */
+    min-height: 34px;
+    background: transparent linear-gradient(90deg, #5F1EBE 0%, #2874F0 67%, #0F5FDC 100%) 0% 0% no-repeat;
+    font-size: 20px;
+    color: #fff;
+    padding: 8px 20px;
+
   }
   
+
   .nav-container {
     display: flex;
     flex-direction: row;
@@ -28,10 +25,10 @@
   }
   
   .nav-logo {
-    color: #f5b921;
+    color:#f7efec;
     /* align-items:flex-start; */
-    margin-left: 80px;
-    /* padding-left: 100px; */
+    margin-left: 50px;
+    padding-left: 100px;
     cursor: pointer;
     text-decoration: none;
     font-size: 2.5rem;
@@ -48,6 +45,15 @@
 height: 40px;
 /* margin: 1% auto; */
   }
+  .chatDialogBox>div>div{
+    height: 600px !important;
+    width: 400px !important;
+  }
+  .chatDialogBox{
+    height: 600px !important;
+    width: 2070px !important;
+
+  }
   
   .nav-menu {
     display: flex;
@@ -58,7 +64,11 @@ height: 40px;
     text-align: right;
     margin-right: 2rem;
     width: 60%;
+
   }
+  /* .nav-menu :hover{
+    color: #397af3;
+  } */
   
   .nav-links {
     color: #fff;
@@ -87,11 +97,11 @@ height: 40px;
   
   .nav-item:hover:after {
     width: 100%;
-    background: #f37439;
+    background: white;
   }
   
   .nav-item .active {
-    color: #f37439;
+    color: #f7efec;
     /* border: 1px solid #f37439; */
   }
   
@@ -137,6 +147,7 @@ height: 40px;
       transform: translate(-100%, 60%);
       font-size: 1.8rem;
       cursor: pointer;
-      color: #ffdd40;
+      color:#f7efec;
     }
+
   }

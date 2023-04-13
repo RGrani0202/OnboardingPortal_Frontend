@@ -20,6 +20,8 @@ import DeleteModule from './admincomponents/deletemodule/DeleteModule';
 import UpdateItem from './admincomponents/updateitem/UpdateItem';
 import UpdateTemplate from './admincomponents/updatetemplate/UpdateTemplate';
 import UpdateModule from './admincomponents/updatemodule/UpdateModule';
+import Homepage from './HomePage/HomePage';
+import SignUp from './HomePage/Signup';
 
 function App() {
   const loc=useLocation();
@@ -29,6 +31,8 @@ function App() {
     <Header/>
       <Routes>
         <Route path='/' element={<AdminPage/>} />
+        <Route path='/homepage' element={<Homepage/>}/>
+        <Route path='/signup' element={<SignUp/>}/>
         {/* <Route index element={<Login/>} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/adminnavbar" element={<AdminNavbar />} />
