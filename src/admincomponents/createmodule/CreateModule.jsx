@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import { useNavigate } from "react-router-dom";
 import "./CreateModule.css";
-import AdminNavbar from '../adminhomepage/AdminNavbar';
+import AdminNavbar from '../AdminHomePage/AdminNavbar';
 import axios from 'axios';
 
 
@@ -47,49 +47,7 @@ const CreateModule = () => {
             console.log(arraytemplate);
         }
     }
-    // const handleChange = (event) => {
-    //     console.log(event.target.checked)
 
-    //     let name = event.target.value;
-
-
-    //     if (event.target.checked === true) {
-    //         setitemarray(current => [...current, name]);
-    //         console.log(itemarray);
-
-    //     }
-    //     if (event.target.checked === false) {
-    //         setitemarray(itemarray.filter(item => item !== name));
-    //         console.log(itemarray);
-    //     }
-    // }
-
-    // let handleSubmit=async(e)=>{
-    //     e.preventDefault();
-    //     console.log("saved");
-    //     try {
-    //         //pass items to store in database
-    //       let res = await fetch("", {
-    //         method: "POST",
-    //         body: JSON.stringify({
-    //             moduleName: moduleName,
-    //             moduleDescription: moduleDescription,
-    //             template: arraytemplate,
-    //         }),
-    //       })
-    //       //convert response to json format
-    //       let resJson = await res.json();
-    //       //give message to browser
-    //       if (resJson.status === 200) {
-    //         console.log("data save in api");
-    //         setmoduleName("");
-    //         setmoduleDescription("");
-    //       } 
-    //     } catch (err) {
-    //       console.log(err);
-    //     }
-
-    // }
     let handleSubmit = async (e) => {
 
         e.preventDefault();

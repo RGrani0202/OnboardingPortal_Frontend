@@ -1,10 +1,10 @@
  .incorrect{
-    color: rgb(191, 39, 39);
+    color: rgba(73, 145, 254, 0.365);
     text-align: center;
     padding-bottom: 1%;
   }
   .incorrect{
-    color: rgb(191, 39, 39);
+    color: rgba(73, 145, 254, 0.365);
     text-align: center;
     padding-bottom: 1%;
   }
@@ -26,7 +26,7 @@
     border:1px solid rgb(203, 42, 42) !important ;
   } */
   .outlinedInput{
-    border:1px solid rgb(203, 42, 42) !important ;
+    border:1px solid rgba(73, 145, 254, 0.365) !important ;
   }
   .feilds{
     padding-bottom: 4%;
@@ -36,17 +36,17 @@
   .continue{
     padding-top: 2% !important;
     padding-bottom: 2% !important;
-    background-image: linear-gradient(to bottom right,rgb(203, 42, 42),rgb(244, 121, 40));
+    background-image: linear-gradient(to bottom right,rgba(73, 145, 254, 0.365),rgba(73, 145, 254, 0.447));
     /* border-color: ; */
     /* background-color: #f8ae53 !important; */
-    color: rgb(236, 223, 223) !important;
+    color: rgb(252, 253, 254) !important;
   }
   .continue:hover{
     /* background-color: #fcbd71 !important; */
-    color: rgb(137, 9, 9) !important;
+    color: rgba(73, 145, 254, 0.447) !important;
   }
   .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
-    color:rgb(203, 42, 42) !important;
+    color:rgba(73, 145, 254, 0.365) !important;
   }
   /* .MuiFormControl-root ,.css-1nrlq1o-MuiFormControl-root{
     border:1px solid rgb(203, 42, 42) !important ;

@@ -1,0 +1,172 @@
+.modal {
+    /* box-shadow: 0 5px 10px rgba(215, 44, 44, 0.5); */
+    position: 'flex';
+    flex-direction: column;
+    padding: 0%;
+    max-width: 30%;
+    max-height: 75%;
+    margin-top: 6rem;
+    margin-left: 55rem;
+    border-radius: 5px;
+}
+
+.paper {
+    margin-top: 0rem;
+    background-color: white;
+    display: 'center';
+    max-width: 100%;
+    height: 100%;
+    padding: 0%;
+    border-radius: 5px;
+}
+
+.paper .div1 {
+    background: transparent linear-gradient(90deg, #5F1EBE 0%, #2874F0 67%, #0F5FDC 100%) 0% 0% no-repeat;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    border: none;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.paper .div1 .p1 {
+    color: #f9f6f6;
+    margin-left: 5rem;
+}
+
+.paper .div2 {
+    background-color: rgb(246, 242, 242);
+    align-items: center;
+    max-width: 100%;
+    height: 6%;
+    border: 1px groove;
+}
+
+.paper .div2 .p2 {
+    color: black;
+    margin-top: auto;
+    font-size: small;
+}
+
+.paper .p3 {
+    color: black;
+    margin-top: 1rem;
+    font-size: small;
+}
+
+.paper .span1 {
+    background-color: rgb(243, 245, 243);
+    color: rgb(0, 0, 0);
+    /*border: 1px solid ;*/
+    border-radius: 20%;
+    width: 50%;
+    font-size: medium;
+    margin-top: auto;
+    margin-left: 0;
+    padding: 2px;
+
+}
+
+.paper .pic1 {
+    width: 40px;
+    height: 25px;
+}
+
+.paper .div3 {
+    background-color: rgb(243, 245, 243);
+    margin-top: 0.5rem;
+    margin-left: 2.5rem;
+    /*border: 1px solid;*/
+    border-radius: 10px;
+    width: 50%;
+    height: 5%;
+    padding: 3px;
+
+}
+
+.paper .div3 .span2 {
+    color: black;
+}
+
+.paper .div4 {
+    background-color: rgb(243, 245, 243);
+    margin-top: 0.5rem;
+    margin-left: 2.5rem;
+
+    /* border: 1px solid;*/
+    border-radius: 10px;
+    width: 70%;
+    height: 10%;
+    padding: 3px;
+
+}
+
+.paper .div4 .span3 {
+    color: black;
+}
+
+.paper .div5 {
+    margin-top: 4rem;
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+
+.paper .div5 .input1 {
+    background-color: rgb(240, 241, 243);
+    margin-top: 7rem;
+    margin-left: 1rem;
+    width: 70%;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.paper .div5 .btn1 {
+    margin-left: 0.5rem;
+    width: 15%;
+    height: 33px;
+    border: 0.5px solid;
+    font-size: medium;
+    border-radius: 5px;
+
+}
+
+.paper .div6 .p {
+    color: black;
+}
+
+.div1 {
+    display: flex;
+}
+
+.btn2 {
+    margin-left: 70px;
+    background-color: #5F1EBE;
+    border: none;
+    color: rgba(184, 176, 176, 0.557);
+    font-size: 15px;
+}
+
+.btn1 {
+    background-color: #6368f3;
+    color: white;
+    
+
+}
+
+.btn-header {
+
+    background-color:transparent;
+
+    border: none;
+
+}
+
+.btn-label {
+
+    color: aliceblue;
+
+    font-size: 18px;
+
+}

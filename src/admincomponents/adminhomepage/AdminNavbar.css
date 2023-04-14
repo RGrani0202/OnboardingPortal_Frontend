@@ -5,7 +5,7 @@
 }
 
 .adminbar {
-  background-color: #323231;
+  background-color: #2697c7cb;
   height: 50px;
   box-sizing: border-box;
   display: flex;
@@ -17,11 +17,11 @@
   /* z-index: 20; */
 }
 .admin-divider{
-  border-left:1px solid rgb(69, 69, 69);
-  border-right:1px solid rgb(69, 69, 69);
+  border-left:1px solid rgb(188, 196, 233);
+  border-right:1px solid rgb(188, 196, 233);
 }
 .admin-links {
-  color: rgb(7, 7, 7);
+  color: rgba(93, 222, 224, 0.811);
   text-decoration: none;
   /* padding: 0.5rem 1rem; */
   height: 100%;
@@ -71,14 +71,14 @@
 } */
 
 .admin-item .active {
-  color: rgb(104, 103, 103);
+  color: rgb(46, 26, 194);
   /* border: 1px solid #ffdd40; */
 }
 
 .adminPage {
   /* position: ; */
   height: 100%;
-background-color: rgb(43, 42, 42);
+background-color: rgb(0, 60, 198);
   /* margin: 80px auto; */
   width: 100%;
   display: flex;
@@ -88,13 +88,15 @@ background-color: rgb(43, 42, 42);
 }
 
 .adminDiv1 {
-  height: 100%;
-  width: 80%;
+  height: 100vh;
+  left: 2rem;
+  width: 100vw;
   /* margin-left: 0; */
-  background-image: url('C:\OnboardingPortal_Frontend\src\assets\mainPage.jpg');
+  background-image: url('C:\Users\lakshmisowjan_vadde\OneDrive - HCL Technologies Ltd\Desktop\Day0\NEW@FRONTEND\src\Assets\HCL Tech logo.png');
   background-repeat: no-repeat;
-  object-fit: contain;
-  background-position: right;
+  background-size: cover;
+  object-fit: contains;
+  background-position: absolute;
 }
 
 .adminDiv2 {
@@ -107,7 +109,7 @@ background-color: rgb(43, 42, 42);
 }
 
 .adminButton>span {
-  color: rgb(43, 42, 42);
+  color: black;
   font-family: 'Exo 2', sans-serif;
   font-size: 1.3rem;
   font-weight: bold;
@@ -138,16 +140,16 @@ background-color: rgb(43, 42, 42);
 }
 
 .color1 {
-  background-color: rgb(244, 176, 40);
+  background-color: rgb(173, 212, 240);
   /* border: 2px 2px 0 2px solid white; */
 }
 
 .color2 {
-  background-color: rgb(244, 132, 40);
+  background-color: rgb(142, 197, 240);
   /* border: 10px solid white; */
 }
 
 .color3 {
-  background-color: rgb(244, 84, 40);
+  background-color: rgb(67, 164, 238);
   /* border: 0 2px 2px 2px solid white; */
 }

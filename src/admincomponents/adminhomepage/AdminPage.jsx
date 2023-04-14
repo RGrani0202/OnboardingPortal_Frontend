@@ -12,6 +12,7 @@ const handleClick = () => setClick(!click);
     
         return (
           <div className="adminPage">
+             
           <div className="adminDiv1">
             {/* <img src="src\assets\mainPage.jpg" alt="img" /> */}
           </div>
