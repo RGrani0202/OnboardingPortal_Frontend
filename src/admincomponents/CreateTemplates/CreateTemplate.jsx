@@ -15,7 +15,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import Input from '@mui/material/Input';
 import { useNavigate } from "react-router-dom";
 import "./CreateTemplate.css";
-import AdminNavbar from '../adminhomepage/AdminNavbar';
+import AdminNavbar from '../AdminHomePage/AdminNavbar';
 import axios from 'axios';
 
 

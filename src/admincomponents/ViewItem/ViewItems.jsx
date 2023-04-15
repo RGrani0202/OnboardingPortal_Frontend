@@ -1,4 +1,4 @@
-import AdminNavbar from "../adminhomepage/AdminNavbar";
+import AdminNavbar from "../AdminHomePage/AdminNavbar";
 import "./ViewItems.css";
 import axios from "axios";
 import React, { useState, useEffect } from 'react';

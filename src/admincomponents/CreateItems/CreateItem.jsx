@@ -5,7 +5,7 @@ import Stack from '@mui/material/Stack';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import './CreateItem.css';
-import AdminNavbar from "../adminhomepage/AdminNavbar";
+import AdminNavbar from "../AdminHomePage/AdminNavbar";
 
 const CreateItem = () => {
   let api = process.env.REACT_APP_POST_ITEM;

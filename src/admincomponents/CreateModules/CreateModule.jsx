@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import { useNavigate } from "react-router-dom";
 import "./CreateModule.css";
-import AdminNavbar from '../adminhomepage/AdminNavbar';
+import AdminNavbar from '../AdminHomePage/AdminNavbar';
 import axios from 'axios';
 
 

@@ -78,7 +78,7 @@
 .adminPage {
   /* position: ; */
   height: 100%;
-background-color: rgb(43, 42, 42);
+background-color: rgb(96, 138, 235);
   /* margin: 80px auto; */
   width: 100%;
   display: flex;
@@ -89,12 +89,13 @@ background-color: rgb(43, 42, 42);
 
 .adminDiv1 {
   height: 100%;
-  width: 80%;
+  width: 90%;
   /* margin-left: 0; */
-  background-image: url('C:\FE\NEW@FRONTEND\src\assets\EmpOnboard.png');
+  background-image: url('C:\FE\NEW@FRONTEND\src\Assets\mainPage3.png');
   background-repeat: no-repeat;
-  object-fit: contain;
-  background-position: right;
+  background-size: cover;
+  object-fit:contain ;
+  background-position: absolute;
 }
 
 .adminDiv2 {
@@ -107,7 +108,7 @@ background-color: rgb(43, 42, 42);
 }
 
 .adminButton>span {
-  color: rgb(10, 0, 0);
+  color: rgb(10, 0, 0)  ;
   font-family: 'Exo 2', sans-serif;
   font-size: 1.3rem;
   font-weight: bold;

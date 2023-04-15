@@ -18,9 +18,9 @@ const Footer = () => {
 
   return (
     <footer className="footerDiv">
-      <img className="footerLogo" src="https://www.logolynx.com/images/logolynx/0b/0bf61bb3ece3d121adb09264efd4a1e4.jpeg" alt="" />
+      {/* <img className="footerLogo" src="https://www.mastercard.us/content/dam/public/mastercardcom/mea/za/logos/mc-logo-52.svg" alt="" /> */}
 
-      <p className="footerPara">© 1991-2023 Hcl Tech.</p>
+      <p className="footerPara">HCLTech.</p>
       <div className="footerShareIcon">
         <Link className="shareIcon"><TwitterIcon /></Link>
         <Link className="shareIcon"><FacebookIcon /></Link>

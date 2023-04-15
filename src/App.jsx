@@ -1,27 +1,30 @@
 import './App.css';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import Header from './header/Header';
-import Footer from './footer/Footer';
-import AdminNavbar from './admincomponents/adminhomepage/AdminNavbar';
-import AdminPage from './admincomponents/adminhomepage/AdminPage';
-import ViewItems from './admincomponents/viewitems/ViewItems';
-import ViewTemplates from './admincomponents/viewtemplates/ViewTemplates';
-import ViewModules from './admincomponents/viewmodules/ViewModules';
-import CreateItem from './admincomponents/createitem/CreateItem';
-import CreateTemplate from './admincomponents/createtemplate/CreateTemplate';
-import CreateModule from './admincomponents/createmodule/CreateModule';
+import Header from './HeaderComponent/Header';
+import Footer from './FooterComponents/Footer';
+import AdminNavbar from './admincomponents/AdminHomePage/AdminNavbar';
+import AdminPage from './admincomponents/AdminHomePage/AdminPage';
+import ViewItems from './admincomponents/ViewItem/ViewItems';
+import ViewTemplates from './admincomponents/ViewTemplate/ViewTemplates';
+import ViewModules from './admincomponents/ViewModule/ViewModules';
+import CreateItem from './admincomponents/CreateItems/CreateItem';
+import CreateTemplate from './admincomponents/CreateTemplates/CreateTemplate';
+import CreateModule from './admincomponents/CreateModules/CreateModule';
+
 import Login from './LoginPage/Login';
 import User from './User-Component/User';
 import UserTemplate from './User-Component/Usertemplates';
 import UserItem from './User-Component/UserItem';
-import DeleteItem from './admincomponents/deleteitems/DeleteItem';
-import DeleteTemplate from './admincomponents/deletetemplate/DeleteTemplate';
-import DeleteModule from './admincomponents/deletemodule/DeleteModule';
-import UpdateItem from './admincomponents/updateitem/UpdateItem';
-import UpdateTemplate from './admincomponents/updatetemplate/UpdateTemplate';
-import UpdateModule from './admincomponents/updatemodule/UpdateModule';
+import DeleteItem from './admincomponents/DeleteItems/DeleteItem';
+import DeleteTemplate from './admincomponents/DeleteTemplates/DeleteTemplate';
+import DeleteModule from './admincomponents/DeleteModules/DeleteModule';
+import UpdateItem from './admincomponents/UpdateItems/UpdateItem';
+import UpdateTemplate from './admincomponents/UpdateTemplates/UpdateTemplate';
+import UpdateModule from './admincomponents/UpdateModules/UpdateModule';
 import Register from './admincomponents/SignUp/Register';
-import Contactus from './admincomponents/ChatWithUs/Contactus';
+import SimpleModal from './admincomponents/ModalComponent/SimpleModal';
+
+
 
 function App() {
   const loc=useLocation();
@@ -51,7 +54,9 @@ function App() {
         <Route path="updateitem"  element={<UpdateItem/>} />
         <Route path="updatetemplate" element={<UpdateTemplate/>} />
         <Route path="updatemodule" element={<UpdateModule/>} /> 
-        <Route path="/chat" element={<Contactus/>} />  
+        <Route path="/chat" element={<SimpleModal/>} /> 
+        
+       
            
       </Routes>
       <Footer/>

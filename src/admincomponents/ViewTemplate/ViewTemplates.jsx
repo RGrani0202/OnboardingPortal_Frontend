@@ -1,4 +1,4 @@
-import AdminNavbar from "../adminhomepage/AdminNavbar";
+import AdminNavbar from "../AdminHomePage/AdminNavbar";
 import "./ViewTemplates.css";
 import React, { useState, useEffect } from 'react';
 import { Button } from "@mui/material";

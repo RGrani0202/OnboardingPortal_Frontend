@@ -44,26 +44,18 @@ const Login = () => {
 
   //   console.log(postvalue);//previous value
   // }
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
 
     e.preventDefault();
     console.log("saved");
     try {
       //pass items to store in database
-      axios.post(apikey + "?userName=" + userName + "&password=" + newPassword, {
+      const response=await axios.post(apikey + "?userName=" + userName + "&password=" + newPassword, {
         userName: userName,
         password: newPassword
       }
-        , {
-          headers: {
-            "Content-Type": 'application/json'
-          }
-        }
-      ).then((response) => {
-        console.log(response);
-        setPost(response.data);
-      });
-
+        
+      )
     } catch (err) {
       console.log(err);
     }
