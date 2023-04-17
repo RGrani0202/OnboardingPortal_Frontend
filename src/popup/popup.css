@@ -1,0 +1,51 @@
+#alert-dialog-title{
+  text-align: center;
+  color: whitesmoke;
+  background-color: #5F1EBE;
+}
+/* 
+.bottomdiv{
+  
+  padding-bottom: 20px;
+} */
+#button{
+  text-align: center;
+  width: 70px;
+  color: whitesmoke;
+   margin: 0 auto;
+  background-color: #5F1EBE;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.time{
+  /* background-color:; */
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #d7e6e6 100px 50px;
+  margin: 2% auto;
+
+  /* height: 10px; */
+  /* height: 20px; */
+  
+
+
+}
+.text{
+  display: flex;
+  justify-content:center;
+}
+.dialoghead2{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #d7e6e6 100px 50px;
+  /* margin: 8%; */
+}
+.textfield{
+  display: flex;
+  justify-content:center;
+}
+#outlined-basic{
+  padding-bottom: 20px;
+}

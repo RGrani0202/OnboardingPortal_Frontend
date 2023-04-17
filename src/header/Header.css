@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
 
 .navbar {
-    background-color:  #141413;
+    background-color:  #6d21e8;
     height: 110px;
     display: flex;
     justify-content: center;
@@ -17,6 +17,20 @@
     /* z-index: 20; */
   }
   
+#alert-dialog-title{
+  text-align: center;
+  color: #1f1e1e;
+  background-color: #f5b921;
+}
+
+#vitthal{
+  text-align: center;
+  width: 300px;
+  color: black;
+   margin: 0 auto;
+  background-color: #0f4fe4;
+}
+
   .nav-container {
     display: flex;
     flex-direction: row;
@@ -27,10 +41,11 @@
     max-width: 1500px;
   }
   
+  
   .nav-logo {
     color: #f5b921;
     /* align-items:flex-start; */
-    margin-left: 80px;
+    margin-left: 130px;
     /* padding-left: 100px; */
     cursor: pointer;
     text-decoration: none;
@@ -48,6 +63,15 @@
 height: 40px;
 /* margin: 1% auto; */
   }
+  .chatDialogBox>div>div{
+    height: 600px !important;
+    width: 400px !important;
+    
+  }
+  .chatDialogBox{
+    height: 600px !important;
+    width: 2070px !important;
+  }
   
   .nav-menu {
     display: flex;
@@ -58,7 +82,11 @@ height: 40px;
     text-align: right;
     margin-right: 2rem;
     width: 60%;
+
   }
+  /* .nav-menu :hover{
+    color: #397af3;
+  } */
   
   .nav-links {
     color: #fff;
@@ -87,11 +115,11 @@ height: 40px;
   
   .nav-item:hover:after {
     width: 100%;
-    background: #f37439;
+    background: #0f4fe4;
   }
   
   .nav-item .active {
-    color: #f37439;
+    color: #f7efec;
     /* border: 1px solid #f37439; */
   }
   
@@ -139,4 +167,6 @@ height: 40px;
       cursor: pointer;
       color: #ffdd40;
     }
+    
+
   }

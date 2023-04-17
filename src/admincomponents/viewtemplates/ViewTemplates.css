@@ -12,7 +12,7 @@
     background-color: white;
 }
 .tableContainer{
-    background-image: url("C:\OnboardingPortal_Frontend\src\assets\userPage3.jpg");
+    background-image: url("C:\Users\vitthal.agarwal\Downloads\NEW@FRONTEND\src\assets\maple.jpg");
     /* object-fit: contain; */
     background-size: cover;
     width: 100%;
@@ -62,7 +62,7 @@ margin-left: 1% !important;
 }
 .css-et1ao3-MuiTypography-root{
     font-size: 1.2rem !important;
-    color: rgb(244, 121, 40);
+    color: rgb(40, 50, 244);
 }
 .createButton{
     margin-left: 10px !important;
@@ -71,11 +71,11 @@ margin-left: 1% !important;
     border: 1px solid red !important;
 }
 .icon{
-    color: rgb(244, 121, 40);
+    color: rgb(40, 50, 244);
     cursor: pointer;
 }
 .avatar{
-    background-image: linear-gradient(to bottom right,rgb(203, 42, 42),rgb(244, 121, 40));
+    background-image: linear-gradient(to bottom right,rgb(203, 42, 42),rgb(40, 50, 244));
 }
 .cardAction{
     display: flex;

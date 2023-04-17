@@ -20,7 +20,7 @@ import DeleteModule from './admincomponents/deletemodule/DeleteModule';
 import UpdateItem from './admincomponents/updateitem/UpdateItem';
 import UpdateTemplate from './admincomponents/updatetemplate/UpdateTemplate';
 import UpdateModule from './admincomponents/updatemodule/UpdateModule';
-
+import SignupForm from './signup/Signup';
 function App() {
   const loc=useLocation();
   console.log(loc);
@@ -28,7 +28,8 @@ function App() {
     <div className="app">
     <Header/>
       <Routes>
-        <Route path='/' element={<AdminPage/>} />
+      <Route path='/' element={<SignupForm/>} />
+        <Route path='/home' element={<AdminPage/>} />
         {/* <Route index element={<Login/>} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/adminnavbar" element={<AdminNavbar />} />

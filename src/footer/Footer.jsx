@@ -18,9 +18,9 @@ const Footer = () => {
 
   return (
     <footer className="footerDiv">
-      <img className="footerLogo" src="https://www.mastercard.us/content/dam/public/mastercardcom/mea/za/logos/mc-logo-52.svg" alt="" />
+      <img className="footerLogo" src="https://th.bing.com/th/id/R.d8d1c9697efe0197ea71cfe611f4ddd2?rik=oputv6YhG18P8Q&riu=http%3a%2f%2f1.bp.blogspot.com%2f-ZsEnpy0pmPs%2fU4cQJaLcA7I%2fAAAAAAAAAGc%2fvmE_VSriiq4%2fs1600%2fhcl_logo.png&ehk=BE%2fIhFCdT2BosMXRqzZxpOTfdu84BRwBuzQkSCY2cWY%3d&risl=&pid=ImgRaw&r=0" alt="master" />
 
-      <p className="footerPara">© 1994-2023 Mastercard.</p>
+      <p className="footerPara">© 1994-2023 HCLTech.</p>
       <div className="footerShareIcon">
         <Link className="shareIcon"><TwitterIcon /></Link>
         <Link className="shareIcon"><FacebookIcon /></Link>

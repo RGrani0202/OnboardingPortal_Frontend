@@ -89,9 +89,9 @@ background-color: rgb(43, 42, 42);
 
 .adminDiv1 {
   height: 100%;
-  width: 80%;
+  width: 100%;
   /* margin-left: 0; */
-  background-image: url('C:\OnboardingPortal_Frontend\src\assets\mainPage.jpg');
+  background-image: url("C:\Users\vitthal.agarwal\Downloads\NEW@FRONTEND\src\assets\mainPage.png" );
   background-repeat: no-repeat;
   object-fit: contain;
   background-position: right;
@@ -138,16 +138,16 @@ background-color: rgb(43, 42, 42);
 }
 
 .color1 {
-  background-color: rgb(244, 176, 40);
+  background-color: rgb(109, 167, 237);
   /* border: 2px 2px 0 2px solid white; */
 }
 
 .color2 {
-  background-color: rgb(244, 132, 40);
+  background-color: rgb(178, 211, 231);
   /* border: 10px solid white; */
 }
 
 .color3 {
-  background-color: rgb(244, 84, 40);
+  background-color: rgb(109, 167, 237);
   /* border: 0 2px 2px 2px solid white; */
 }
