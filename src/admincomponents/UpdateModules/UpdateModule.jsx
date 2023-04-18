@@ -60,23 +60,15 @@ export default function UpdateModule() {
 
   
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
     try {
-      axios
+      const response = await axios
         .put(apikey, {
           name: moduleName,
           description: moduleDescription,
           templates: arraytemplate
-        }, {
-          headers: {
-            "Content-Type": 'application/json'
-          }
         })
-        .then((response) => {
-          console.log(response.data);
-          alert("Template updated succesfully!")
-          setResponse(response.data);
-        });
+        
     }
     catch (e) {
       alert("Please try again");

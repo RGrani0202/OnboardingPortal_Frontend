@@ -47,7 +47,7 @@
     background-color: rgb(242, 244, 246);
     align-items: center;
     max-width: 100%;
-    height: 6%;
+    height: 4%;
     border: 1px groove;
 }
 
@@ -58,8 +58,9 @@
 }
 
 .paper .p3 {
+    
     color: black;
-    margin-top: 1rem;
+    margin-top: 0.3rem;
     font-size: small;
 }
 
@@ -112,13 +113,22 @@
 }
 
 .paper .div5 {
-    margin-top: 2rem;
+   
     max-width: 100%;
-    max-height: 100vh;
+    height: 6.7rem;
+  
+   
+}
+.btn{
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    height: 1.3rem;
+    border: 1px solid rgb(33, 33, 224);
+    border-radius: 10px;
 }
 
-
-.paper .div5 .input1 {
+/*.paper .div5 .input1 {
     margin-top: 7rem;
     margin-left: 1rem;
     width: 70%;
@@ -126,9 +136,9 @@
     border: 1px solid gray;
     border-radius: 5px;
     background-color: rgb(240,241,243);
-}
+}*/
 
-.paper .div5 .btn1 {
+/*.paper .div5 .btn1 {
     margin-left: 0.5rem;
     width: 20%;
     height: 32px;
@@ -137,7 +147,8 @@
     border-radius: 5px;
     border: 0.5px solid;
     color: #f9f6f6;
-}
+}*/
+
 
 
 
@@ -154,4 +165,37 @@
     border: none;
     color: rgb(8, 0, 0);
     font-size: 15px;
+}
+.msg1{
+    color: black;
+    font-size: medium;
+    margin-left: 1rem;
+    
+}
+.user{
+    float: right;
+    color: black;
+    font-size: medium;
+    margin-top: -0.5rem;
+}
+.msg2{
+    color: black;
+    font-size: medium;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+.bodyChatbot{
+    
+    max-width: 100%;
+    height: 250px;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+   
+    
+    
+   
+}
+.msg1{
+    color: black;
 }

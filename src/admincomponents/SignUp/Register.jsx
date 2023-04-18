@@ -12,15 +12,21 @@ import FormControl from '@mui/material/FormControl';
 import MailIcon from '@mui/icons-material/Mail';
 import LockIcon from '@mui/icons-material/Lock';
 import Button from '@mui/material/Button';
+
 import axios from 'axios';
+//import Service from "./ServiceComponent/Service"
 const Register = () => {
     const [postvalue, setPost] = useState();
     const [bool, setBool] = useState(false);
     const [incorrectData, setIncorrectData] = useState(false);
+
     const [userName, setUserName] = useState();
     const [email, setEmail] = useState();
     const [newPassword, setPassword] = useState();
     const [confirmpassword, setConfirmpassword] = useState();
+    
+
+
     const navigate = useNavigate("");
     const [showPassword, setShowPassword] = useState(false);
     let apikey =process.env.REACT_APP_POST_USER_REGISTER;
@@ -38,17 +44,22 @@ const Register = () => {
         try {
             //pass items to store in database
             const response = await axios.post(apikey, {
-                userName: userName,
-                email: email,
-                password: newPassword,
-                confirm_password: confirmpassword
+            userName: userName,
+            email: email,
+            password: newPassword,
+            confirm_password: confirmpassword
             }
-               
+           
             )
-        } catch (err) {
-            console.log(err);
+            } catch (err) {
+             console.log(err);
+             }
         }
-    }
+
+
+
+   
+    
     return (
         <div className="RegistrationPage" align="centre">
             <h4><center>Register</center></h4>
@@ -58,6 +69,7 @@ const Register = () => {
                 <div className="feilds">
                     <FormControl className="size" variant="outlined">
                         <InputLabel htmlFor="outlined-adornment-password">UserName</InputLabel>
+                        
                         <OutlinedInput
                             size='outlinedInput'
                             id="outlined-adornment-password"
@@ -69,6 +81,7 @@ const Register = () => {
                             onChange={(event) => {
                                 setUserName(event.target.value);
                             }}
+                            
                         />
                     </FormControl>
                 </div>

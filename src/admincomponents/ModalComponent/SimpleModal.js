@@ -1,41 +1,49 @@
 import React from "react";
 //import { makeStyles } from '@material-ui/core/styles';
-
-import {Modal} from "@mui/material";
-import {Button} from "@mui/material";
+import { useState } from "react";
+import { Modal } from "@mui/material";
+//import { Button } from "@mui/material";
 import './Modal.css';
 import PersonPinIcon from '@mui/icons-material/PersonPin';
-import { useState } from "react";
-import { v4 as uuidv4 } from 'uuid';
-import { IconButton } from "@mui/material";
-
-function rand() {
-
-    return Math.round(Math.random() * 20) - 10;
-
-}
-
-function getModalStyle() {
-
-    const top = 50 + rand();
-
-    const left = 50 + rand();
-
-    return {
-
-        top: `${top}%`,
-
-        left: `${left}%`,
-
-        transform: `translate(-${top}%, -${left}%)`,
-
-    };
-
-}
+import Messages from "./Messages";
 export default function SimpleModal() {
+    const data = [
+        {
+            "id": 1,
+            "query": "IT support",
+            "msg": "Please contact IT team"
+        },
+        {
+            "id": 2,
+            "query": "Laptop related issues",
+            "msg": "please raise a ticket under: MyHcl->ServiceXchange - download "
+        },
+        {
+            "id": 3,
+            "query": "HR related issues",
+            "msg": "Please raise a ticket under: MyHcl-> SSD"
+        },
+        {
+            "id": 4,
+            "query": "Domain change",
+            "msg": "Please contact with RM"
+        },
+        {
+            "id": 5,
+            "query": "Software/tools installation",
+            "msg": "please raise a ticket under: MyHcl->tarmac - download software/Tool, MyHcl->service Xchange->install software - installation"
+        },
+        {
+            "id": 6,
+            "query": "Other issues",
+            "msg": "HCL"
+        }
+    ]
+    const [button, setButton] = useState();
+    const [msg1, setMsg] = useState();
 
-    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const weekday = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
+    const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const d = new Date();
     const dtm = weekday[d.getDay()];;
     const dt = month[d.getMonth()];
@@ -43,69 +51,85 @@ export default function SimpleModal() {
     const date = d.getDate();
 
     const year = d.getFullYear();
+    const timeFormate = new Date()
 
-    const hour = d.getHours();
+    const handleMessage = (value) => {
+        setButton(value);
+        const res = data.map((element1) => {
+            if (element1.query === value) {
+                setMsg(element1.msg)
+                console.log(msg1);
+            }
+        })
+        
+    }
+    
+    const listItems = data.map(
+        (element) => {
+            return (
+                <button value={element.query} className="btn" key={element.id} onClick={() => handleMessage(element.query)}>
+                    {element.query}
+                </button>
+            )
+        })
 
-    const min = d.getMinutes();
 
-    const item1 = [
+    
+    const Time = timeFormate.toLocaleString([], {
 
-        {
+        hour: 'numeric',
 
-            id: "1",
+        minute: 'numeric',
 
-            msg: "Laptop Related Issues",
+        hour12: true
 
-        }
+    })
+    
 
-    ];
+    //  setTimeout(() => {
+    //      console.log("Hi")
+    //  }, 2000)
 
-    //const classes = useStyles();
+    //  setTimeout(() => {
+    //      console.log("Please select a option below to proceed ahead with your query")
+    //  }, 4000)
 
-    const [list, setList] = React.useState(item1);
-
-    const [msg, setName] = React.useState("");
 
     const [open, setOpen] = React.useState(false);
+    //const [print,setPrint]=useState(false);
 
     const handleOpen = () => {
 
         setOpen(true);
 
+        setTimeout(() => {
+            document.getElementById('msg').innerHTML="hi";
+         }, 1000)
+         setTimeout(() => {
+            document.getElementById('msg1').innerHTML="How can I help you";
+         }, 2000)
+         setTimeout(() => {
+            document.getElementById('msg2').innerHTML="Please select a option below to proceed ahead with your query ";
+         }, 3000)
+
+        
+
     };
+    // function displayButton(){
+    //     document.getElementById("user").innerHTML={msg1};
+    // }
+    
+    //     setTimeout(displayButton,1000);
 
-    const handleClose = () => {
-
-        setOpen(false);
-
-    };
-
-    const handleChange = (event) => {
-
-        setName(event.target.value);
-
-    }
-
-    const handleMessage = (event) => {
-
-        event.preventDefault();
-
-        const x = item1.concat({ msg, id: uuidv4() });
-
-        setList(x);
-
-        setName('');
-    };
-    console.warn(item1.length);
     return (
         <div>
-            <button  className="btn-header" onClick={handleOpen}>
-               <label className="btn-label">Chat With Us</label> 
+            <button className="btn-header" onClick={handleOpen}>
+                <label className="btn-label">Chat With Us</label>
             </button>
             <Modal
                 className="modal"
                 open={open}
-                onClose={()=>setOpen(true)}
+                onClose={() => setOpen(true)}
             >
                 <div className="paper">
                     <div className="div1">
@@ -116,21 +140,23 @@ export default function SimpleModal() {
                     </div>
                     <div className="div2"><center><p className="p2">This is offline chat</p></center></div>
                     <center><p className="p3">
-                        {dtm}, {dt} {date} {year} {hour}:{min}
+                        {dtm}, {dt} {date} {year} {/*{hour}:{min} */} {Time}
                     </p></center>
-                    <PersonPinIcon className="pic1" />
-                    <span className="span1">Hi...</span><br></br>
-                    <div className="div3"><span className="span2">How may I help you?</span><br></br></div>
-                    <div className="div4"><span className="span3">Please select a option below to proceed ahead with your query</span></div>
-                    <div className="div5">
+                    <div className="bodyChatbot">
+                        <p id="msg" className="msg1"></p>
+                        <p id="msg1" className="msg1"></p>
+                        <p id="msg2" className="msg1"></p>
+                       
+                        <p className="user" id="btn">{button}</p>
+                        <p className="msg2 " id="user">{msg1}</p>
+                        
+                        
+
+                    </div>
                     
-                    <input type="text"
-                    className="input1"
-                    value={msg}
-                    placeholder="Enter your message"
-                    onChange={handleChange} />
-                    <button className="btn1" type="submit" onClick={handleMessage}>Send</button>
-                    
+                    <div  >
+                        <hr /> 
+                        <div className="div5">{listItems}</div>
                     </div>
 
 
