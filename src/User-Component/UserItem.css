@@ -7,7 +7,7 @@
   height: 100%;
   width: 100%;
   /* margin-left: 0; */
-  background-image: url('C:\OnboardingPortal_Frontend\src\assets\userPage3.jpg');
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8tT91qKgUpP9eVEQ_aYe0eSOjVxkhdzft9DI1FtmM6dgbjTHnhMzF2bU7tX1d4qZnhHmql19Am3A&usqp=CAU&ec=48600112');
   background-repeat: no-repeat;
   background-position:center;
   /* object-fit:fill; */
@@ -29,7 +29,7 @@
     height: 100%;
     width: 100%;
     /* margin-left: 0; */
-    background-image: url('C:\OnboardingPortal_Frontend\src\assets\userPage3.jpg');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8tT91qKgUpP9eVEQ_aYe0eSOjVxkhdzft9DI1FtmM6dgbjTHnhMzF2bU7tX1d4qZnhHmql19Am3A&usqp=CAU&ec=48600112');
     
     background-repeat: no-repeat;
     background-position:center;
@@ -44,14 +44,14 @@
 .itemContainer{
     width: 80%;
     margin: 2% auto;
-    background-color: black;
+    background-color: whitesmoke;
     opacity: 0.8;
 }
 p{
-    color: white;
+    color: black;
 }
 span{
-    color: white;
+    color: black;
 }
 .itemDiv{
     width:95%;

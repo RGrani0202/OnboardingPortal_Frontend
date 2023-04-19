@@ -8,7 +8,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import IconButton from '@mui/material/IconButton';
 import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
+import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
 import MailIcon from '@mui/icons-material/Mail';
 import LockIcon from '@mui/icons-material/Lock';
@@ -41,6 +41,7 @@ const SignUp = () => {
   const handleMouseDownPassword1 = (event) => {
     event.preventDefault();
   };
+
   const handleSubmit = (e) => {
 
     e.preventDefault();
@@ -69,20 +70,47 @@ const SignUp = () => {
         console.log(err);
     }
 }
-
+  
 
   useEffect(() => {
     console.log(postvalue);
     if (postvalue === "User login successfully") {
       console.log(postvalue);
+      
       navigate("/login", {state:"login"});
+      alert('Registered Successfully')
       setBool(true);
     }
+    if (postvalue === "Username is already exsits") {
+    
+      console.log(postvalue);
+     
+     alert('User already exsits')
+     
+     console.log("wrong");
+     
+     setBool(true);
+     
+      }
+     
+     if (postvalue === "password and confirm password must be same") {
+     
+      console.log(postvalue);
+     
+     alert('Password and confirm_password must be same')
+     
+     console.log("wrong");
+     
+     setBool(true);
+     
+      }
     else {
       console.log("wrong");
       setBool(false);
     }
   }, [postvalue])
+
+
     
   return (
     <div className='signUpMain'>
@@ -92,95 +120,114 @@ const SignUp = () => {
         {incorrectData?<div className="incorrect">Incorrect credentials</div>:<div></div>}
       <div className="feilds">
         <FormControl className="size" variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">UserName</InputLabel>
-          <OutlinedInput
-          size='outlinedInput'
-            id="outlined-adornment-password"
-            startAdornment={
+          <TextField id="outlined-adornment-password"
+          
+          InputProps={{
+            startAdornment:(
               <InputAdornment position="start">
                <PersonIcon/>
-
               </InputAdornment>
-            }
-            label="Password"
+            ),
+          }}
             onChange={(event) => {
-              setUserName(event.target.value);
+              setEmail(event.target.value);
             }}
-          />
+            label="User Name"
+          >UserName</TextField>
+
+          
         </FormControl>
       </div>
       <div className="feilds">
         <FormControl className="size" variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Email</InputLabel>
-          <OutlinedInput
-          size='outlinedInput'
-            id="outlined-adornment-password"
-            startAdornment={
+          <TextField id="outlined-adornment-password" 
+          
+          InputProps={{
+            startAdornment:(
               <InputAdornment position="start">
                 <MailIcon />
               </InputAdornment>
-            }
-            label="Password"
+            ),
+          }}
             onChange={(event) => {
               setEmail(event.target.value);
             }}
-          />
+            label="Email"
+          >Email</TextField>
+          
+            
+  
+          
         </FormControl>
       </div>
       <div className="feilds" >
         <FormControl className="size" variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-          <OutlinedInput
-            id="outlined-adornment-password"
-            type={showPassword ? 'text' : 'password'}
-            startAdornment={
-              <InputAdornment position="start"> <LockIcon /></InputAdornment>
-            }
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
+          <TextField id="outlined-adornment-password" 
+                      type={showPassword ? 'text' : 'password'}
+
+           InputProps={{
+            startAdornment:(
+              <InputAdornment position="start">
+                <LockIcon />
               </InputAdornment>
-            }
-            label="Password"
+            ),
+          }} 
+          endAdornment={
+            <InputAdornment position="end">
+              <IconButton
+                aria-label="toggle password visibility"
+                onClick={handleClickShowPassword}
+                onMouseDown={handleMouseDownPassword}
+                edge="end"
+              >
+                {showPassword ? <VisibilityOff /> : <Visibility />}
+              </IconButton>
+            </InputAdornment>
+          }
+
             onChange={(event) => {
               setPassword(event.target.value);
             }}
-          />
+            label="Password"
+
+          >Password</TextField>
+          
         </FormControl>
       </div>
       <div className="feilds" >
         <FormControl className="size" variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Confirm Password</InputLabel>
-          <OutlinedInput
-            id="outlined-adornment-password"
-            type={showConfirmPassword ? 'text' : 'password'}
-            startAdornment={
-              <InputAdornment position="start"> <LockIcon /></InputAdornment>
-            }
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword1}
-                  onMouseDown={handleMouseDownPassword1}
-                  edge="end"
-                >
-                  {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-            label="Password"
-            onChange={(event) => {
-              setConfirmPassword(event.target.value);
-            }}
-          />
+          <TextField     
+          id="outlined-adornment-password" 
+          type={showPassword ? 'text' : 'password'}
+
+InputProps={{
+startAdornment:(
+  <InputAdornment position="start">
+    <LockIcon />
+  </InputAdornment>
+),
+}} 
+endAdornment={
+<InputAdornment position="end">
+  <IconButton
+    aria-label="toggle password visibility"
+    onClick={handleClickShowPassword}
+    onMouseDown={handleMouseDownPassword}
+    edge="end"
+  >
+    {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
+  </IconButton>
+</InputAdornment>
+}
+
+onChange={(event) => {
+  setConfirmPassword(event.target.value);
+}}
+label="Confirm Password"
+          
+          >Confirm Password</TextField>
+          
+          
         </FormControl>
       </div>
       <div className="feilds">

@@ -132,7 +132,7 @@
   color: #fff;
   padding: 8px 20px;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 
 
 }
@@ -170,7 +170,7 @@
 
 .shareIcon:hover,
 .footerList li:hover {
-  color: rgb(104, 103, 103);
+  color: whitesmoke;
   cursor: pointer;
 }
 
@@ -179,7 +179,7 @@
 }
 
 .footerLogo {
-  margin-left: 5%;
-  width: 3%;
+  margin-left: 3%;
+  width: 10%;
 
 }

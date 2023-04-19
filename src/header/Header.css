@@ -45,16 +45,7 @@
 height: 40px;
 /* margin: 1% auto; */
   }
-  .chatDialogBox>div>div{
-    height: 600px !important;
-    width: 400px !important;
-  }
-  .chatDialogBox{
-    height: 600px !important;
-    width: 2070px !important;
 
-  }
-  
   .nav-menu {
     display: flex;
     flex-direction: row;
@@ -130,7 +121,7 @@ height: 40px;
       z-index: 1;
     }
     .nav-item .active {
-      color: #ffdd40;
+      color: #0F5FDC#ffdd40;
       border: none;
     }
     .nav-links {

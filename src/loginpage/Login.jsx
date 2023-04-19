@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import InputAdornment from '@mui/material/InputAdornment';
 import Visibility from '@mui/icons-material/Visibility';
@@ -12,15 +12,18 @@ import MailIcon from '@mui/icons-material/Mail';
 import LockIcon from '@mui/icons-material/Lock';
 import Button from '@mui/material/Button';
 import axios from 'axios';
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
 import "./Login.css";
-import { NavLink } from "react-router-dom" ;
+import { NavLink } from "react-router-dom";
+import PersonIcon from '@mui/icons-material/Person';
 
 
 const Login = () => {
   // const [get, setGet] = useState([{ message: "started" }]);
   const [postvalue, setPost] = useState();
   const [bool, setBool] = useState(false);
-  const [incorrectData, setIncorrectData] = useState(false);
+  const [correctData, setCorrectData] = useState(false);
   const [userName, setUserName] = useState();
   const [newPassword, setPassword] = useState();
   const navigate = useNavigate("");
@@ -51,33 +54,65 @@ const Login = () => {
     e.preventDefault();
     console.log("saved");
     try {
-        //pass items to store in database
-        axios.post(apikey+"?userName="+userName+"&password="+newPassword, {
-          userName: userName,
-          password: newPassword
-        }
+      //pass items to store in database
+      axios.post(apikey + "?userName=" + userName + "&password=" + newPassword, {
+        userName: userName,
+        password: newPassword
+      }
         , {
-            headers: {
-                "Content-Type": 'application/json'   
-            }
+          headers: {
+            "Content-Type": 'application/json'
+          }
         }
-        ).then((response) => {
-          console.log(response);
-          setPost(response.data); 
-        });
+      ).then((response) => {
+        console.log(response);
+        setPost(response.data);
+      });
 
     } catch (err) {
-        console.log(err);
+      console.log(err);
     }
-}
+  }
 
 
   useEffect(() => {
     console.log(postvalue);
     if (postvalue === "User signedUp successfully") {
+
       console.log(postvalue);
-      navigate("/user", {state:"login"});
+
+      // alert('Login Successfull')
+
+      setCorrectData(true);
+
+      navigate("/user", { state: "login" });
+
+      setCorrectData(true);
+
+    }
+
+    if (postvalue === "User not found") {
+
+      console.log(postvalue);
+
+      // alert('Sorry User not found')
+
+      console.log("wrong");
+
       setBool(true);
+
+    }
+
+    if (postvalue === "password incorrect") {
+
+      console.log(postvalue);
+
+      // alert('Sorry your Password is wrong')
+
+      console.log("wrong");
+
+      setBool(true);
+
     }
     else {
       console.log("wrong");
@@ -113,63 +148,78 @@ const Login = () => {
   return (
 
     <div className="loginPage" align="centre">
-    <Box component="form" className="size"
-      noValidate sx={{ '& > :not(style)': { m: 1 } }}>
-        {incorrectData?<div className="incorrect">Incorrect credentials</div>:<div></div>}
-      <div className="feilds">
-        <FormControl className="size" variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">UserName</InputLabel>
-          <OutlinedInput
-          size='outlinedInput'
-            id="outlined-adornment-password"
-            startAdornment={
-              <InputAdornment position="start">
-                <MailIcon />
-              </InputAdornment>
-            }
-            label="Password"
-            onChange={(event) => {
-              setUserName(event.target.value);
-            }}
-          />
-        </FormControl>
-      </div>
-      <div className="feilds" >
-        <FormControl className="size" variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-          <OutlinedInput
-            id="outlined-adornment-password"
-            type={showPassword ? 'text' : 'password'}
-            startAdornment={
-              <InputAdornment position="start"> <LockIcon /></InputAdornment>
-            }
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-            label="Password"
-            onChange={(event) => {
-              setPassword(event.target.value);
-            }}
-          />
-        </FormControl>
-      </div>
-      <div className="feilds">
-        <Button className="size continue" variant="contained" onClick={handleSubmit} >Login</Button>
-      </div>
+      <Box component="form" className="size"
+        noValidate sx={{ '& > :not(style)': { m: 1 } }}>
+            {correctData ? <div className="incorrect">
+        <Stack sx={{ width: '100%' }} spacing={2}>
+        <Alert severity="success">This is a success alert — check it out!</Alert>
+    </Stack>
 
-    </Box>
-  
 
-  </div>
+        </div> : <div></div>}
+        {bool ? <div className="incorrect">
+        <Stack sx={{ width: '100%' }} spacing={2}>
+      
+      <Alert severity="warning">check credentials  — check it out!</Alert>
+      
+    </Stack>
+
+
+        </div> : <div></div>}
+        <div className="feilds">
+          <FormControl className="size" variant="outlined">
+            <InputLabel htmlFor="outlined-adornment-password">UserName</InputLabel>
+            <OutlinedInput
+              size='outlinedInput'
+              id="outlined-adornment-password"
+              startAdornment={
+                <InputAdornment position="start">
+                  <PersonIcon/>
+                </InputAdornment>
+              }
+              label="Password"
+              onChange={(event) => {
+                setUserName(event.target.value);
+              }}
+            />
+          </FormControl>
+        </div>
+        <div className="feilds" >
+          <FormControl className="size" variant="outlined">
+            <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-password"
+              type={showPassword ? 'text' : 'password'}
+              startAdornment={
+                <InputAdornment position="start"> <LockIcon /></InputAdornment>
+              }
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                    onMouseDown={handleMouseDownPassword}
+                    edge="end"
+                  >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              }
+              label="Password"
+              onChange={(event) => {
+                setPassword(event.target.value);
+              }}
+            />
+          </FormControl>
+        </div>
+        <div className="feilds">
+          <Button className="size continue" variant="contained" onClick={handleSubmit} >Login</Button>
+        </div>
+
+      </Box>
+
+
+    </div>
 
   );
 

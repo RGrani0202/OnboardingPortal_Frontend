@@ -30,8 +30,8 @@ function App() {
     <div className="app">
     <Header/>
       <Routes>
-        <Route path='/' element={<AdminPage/>} />
-        <Route path='/homepage' element={<Homepage/>}/>
+        <Route path='/admin' element={<AdminPage/>} />
+        <Route path='/' element={<Homepage/>}/>
         <Route path='/signup' element={<SignUp/>}/>
         {/* <Route index element={<Login/>} /> */}
         <Route path="/login" element={<Login />} />
