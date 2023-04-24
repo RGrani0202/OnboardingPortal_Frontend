@@ -28,12 +28,6 @@ import NextPlanIcon from '@mui/icons-material/NextPlan';
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
-
-
-
-
-
-
 const ViewItems = () => {
   const [datadetails, setDataDetails] = useState([]);
   const [open, setOpen] = useState(false);

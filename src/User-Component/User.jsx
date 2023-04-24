@@ -1,5 +1,5 @@
 import React from "react";
-import './user.css';
+import './User.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from '@mui/material/Card';
@@ -22,8 +22,7 @@ let api = process.env.REACT_APP_GET_MODULE;
             console.log(response.data[0]);
             console.log(itemno.moduleId);
         });
-        
-    }, []);  
+}, []);  
     
     
 return(

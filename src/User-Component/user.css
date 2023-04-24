@@ -1,28 +1,22 @@
 .format{
     height: 100% !important;
-    /* margin-bottom: 0 !important;
-    overflow: auto; */
 }
 .userDiv{
   height: 100%;
   width: 100%;
-  /* margin-left: 0; */
-  background-image: url('C:\Users\lakshmisowjan_vadde\OneDrive - HCL Technologies Ltd\Desktop\Day0\NEW@FRONTEND\src\Assets\userPage3.jpg');
-  background-repeat: no-repeat;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8tT91qKgUpP9eVEQ_aYe0eSOjVxkhdzft9DI1FtmM6dgbjTHnhMzF2bU7tX1d4qZnhHmql19Am3A&usqp=CAU&ec=48600112');
+   background-repeat: no-repeat;
   background-position:center;
-  /* object-fit:fill; */
   background-position: left;
   background-size:cover;
 }
 
 .completePage{
     padding-top: 2%;
-    /* height: 100% !important; */
     width: 100%!important;
     display: flex;
     justify-content: row;
     flex-wrap: wrap;
-    /* background-color: blanchedalmond ; */
   }
   .allCards{
     width:30%;

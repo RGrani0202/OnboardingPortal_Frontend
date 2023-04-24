@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-
 import Footer from './Footer/Footer';
+import HomePage from './HomePage/HomePage';
 import AdminNavbar from './admincomponents/AdminHomePage/AdminNavbar';
 import AdminPage from './admincomponents/AdminHomePage/AdminPage';
 import ViewItems from './admincomponents/ViewItem/ViewItems';
@@ -23,19 +23,21 @@ import UpdateModule from './admincomponents/UpdateModule/UpdateModule';
 import Register from './admincomponents/SignUp/Register';
 import SimpleModal from './admincomponents/ModalComponent/SimpleModal';
 import Header from './HeaderComponent/Header';
-
+import SecondHeader from './HeaderPage/SecondHeader';
 function App() {
   const loc=useLocation();
   console.log(loc);
   return (
     <div className="app">
-  <Header/>
+      {window.location.pathname!=='/login' && window.location.pathname!=='/signup' && window.location.pathname!=='/' && window.location.pathname!=='/admin'? <Header/> : <SecondHeader/>}
       <Routes>
-        <Route path='/' element={<AdminPage/>} />
+       <Route path='/chat' element={<SimpleModal/>} /> 
+        <Route path='/' element={<HomePage/>} />
         {/* <Route index element={<Login/>} /> */}
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/signup" element={<Register/>} />
+
         <Route path="/login" element={<Login />} />
-        <Route path="/chat" element={<SimpleModal />} />
-        <Route path="/register" element={<Register/>}/>
         <Route path="/adminnavbar" element={<AdminNavbar />} />
         <Route path="/viewitems" element={<ViewItems />} />
         <Route path="/viewtemplates" element={<ViewTemplates/>} />
@@ -55,8 +57,9 @@ function App() {
         <Route path="updatemodule" element={<UpdateModule/>} /> 
       </Routes>
       <Footer/>
-    </div>
-  );
+      </div>
+      );
 }
 
-export default App;
+
+ export default App;

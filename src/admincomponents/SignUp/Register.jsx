@@ -1,4 +1,3 @@
-//import './Register.css'
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
@@ -7,6 +6,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import IconButton from '@mui/material/IconButton';
 import OutlinedInput from '@mui/material/OutlinedInput';
+import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import MailIcon from '@mui/icons-material/Mail';
@@ -14,6 +14,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import Button from '@mui/material/Button';
 import PersonIcon from '@mui/icons-material/Person';
 import axios from 'axios';
+import './Register.css'
 
 const Register = () => {
     const [postvalue, setPost] = useState();
@@ -25,50 +26,71 @@ const Register = () => {
     const [confirmpassword, setConfirmpassword] = useState();
     const navigate = useNavigate("");
     const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     let apikey = process.env.REACT_APP_POST_USER_REGISTER;
-
     const handleClickShowPassword = () => setShowPassword((show) => !show);
-
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
-
-    const handleSubmit = (e) => {
-
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("saved");
         try {
             //pass items to store in database
-            axios.post(apikey, {
+            const response = await axios.post(apikey, {
                 userName: userName,
-                email:email,
+                email: email,
                 password: newPassword,
-                confirm_password:confirmpassword
-
-            }
-                , {
-                    headers: {
-                        "Content-Type": 'application/json'
-                    }
-                }
-            ).then((response) => {
+                confirm_password: confirmpassword
+            })
+            .then((response) => {
                 console.log(response);
                 setPost(response.data);
             });
-
         } catch (err) {
             console.log(err);
         }
     }
+    useEffect(() => {
+        console.log(postvalue);
+        if (postvalue === "User login successfully") {
+            console.log(postvalue);
+
+            navigate("/login", { state: "login" });
+            alert('Registered Successfully')
+            setBool(true);
+        }
+        if (postvalue === "Username is already exsits") {
+            console.log(postvalue);
+            alert('User already exsits')
+            console.log("wrong");
+            setBool(true);
+        }
+
+        if (postvalue === "password and confirm password must be same") {
+
+            console.log(postvalue);
+
+            alert('Password and confirm_password must be same')
+
+            console.log("wrong");
+
+            setBool(true);
+
+        }
+        else {
+            console.log("wrong");
+            setBool(false);
+        }
+    }, [postvalue])
 
 
     return (
         <div className="RegistrationPage" align="centre">
             <h3><center>Registration Page</center></h3>
             <Box component="form" className="size"
-                noValidate sx={{ '& > :not(style)': { m: -0.9 } }}>
+               noValidate sx={{ '& > :not(style)': { m: 1 } }}>
                 {incorrectData ? <div className="incorrect">Incorrect credentials</div> : <div></div>}
-
                 <div className="feilds">
                     <FormControl className="size" variant="outlined">
                         <InputLabel htmlFor="outlined-adornment-password">UserName</InputLabel>
@@ -133,13 +155,17 @@ const Register = () => {
                 </div>
                 <div className="feilds" >
                     <FormControl className="size" variant="outlined">
-                        <InputLabel htmlFor="outlined-adornment-password">Confirm Password</InputLabel>
-                        <OutlinedInput
+                        <TextField
                             id="outlined-adornment-password"
                             type={showPassword ? 'text' : 'password'}
-                            startAdornment={
-                                <InputAdornment position="start"> <LockIcon /></InputAdornment>
-                            }
+
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <LockIcon />
+                                    </InputAdornment>
+                                ),
+                            }}
                             endAdornment={
                                 <InputAdornment position="end">
                                     <IconButton
@@ -148,24 +174,25 @@ const Register = () => {
                                         onMouseDown={handleMouseDownPassword}
                                         edge="end"
                                     >
-                                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                                        {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
                                     </IconButton>
                                 </InputAdornment>
                             }
-                            label="Password"
+
                             onChange={(event) => {
                                 setConfirmpassword(event.target.value);
                             }}
-                        />
+                            label="Confirm Password"
+
+                        >Confirm Password</TextField>
+
+
                     </FormControl>
                 </div>
                 <div className="feilds">
-                    <Button className="size continue" variant="contained" onClick={(handleSubmit)} >Register</Button>
-
+                    <Button className="size continue" variant="contained" onClick={(handleSubmit)} >SIGN UP</Button>
                 </div>
-
             </Box>
-
         </div>
     )
 }

@@ -1,14 +1,11 @@
 import React from "react";
-import './Header.css';
+import './SecondHeader.css';
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import SimpleModal from "../admincomponents/ModalComponent/SimpleModal";
-
-const Header = () => {
+const SecondHeader = () => {
 
   const [click, setClick] = useState(false);
-
   const handleClick = () => setClick(!click);
   
   return (
@@ -20,7 +17,7 @@ const Header = () => {
             {/* <i className="fas fa-code"></i> */}
           </NavLink>
 
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
+          {/* <ul className={click ? "nav-menu active" : "nav-menu"}>
 
             <li className="nav-item">
               <NavLink
@@ -31,34 +28,14 @@ const Header = () => {
                 Home
               </NavLink>
             </li>
-            {/* <li className="nav-item">
-              <NavLink
-
-                to="/about"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Menu
-              </NavLink>
-            </li> */}
-            <li className="nav-item">
-              <SimpleModal/>
-            </li>
-            {/* <li className="nav-item">
-              <NavLink
-              to="/chat"
-              className="nav-links"
-              onClick={handleClick}
-              >Chat with us</NavLink>
-            </li> */}
-          </ul>
+            </ul>
           <div className="nav-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
-          </div>
+          </div> */}
         </div>
       </nav>
     </>
   );
 
 }
-export default Header;
+export default SecondHeader;

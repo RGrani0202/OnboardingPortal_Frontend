@@ -49,10 +49,9 @@ export default function UpdateTemplate() {
     }
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
     try {
-      axios
-        .put(apikey, {
+      const response = await axios.put(apikey, {
           name: templateName,
           description: templateDescription,
           items: arraytemplate
@@ -61,11 +60,6 @@ export default function UpdateTemplate() {
             "Content-Type": 'application/json'
           }
         })
-        .then((response) => {
-          console.log(response.data);
-          alert("Template updated succesfully!")
-          setResponse(response.data);
-        });
     }
     catch (e) {
       alert("Please try again");
