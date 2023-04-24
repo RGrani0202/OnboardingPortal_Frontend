@@ -2,30 +2,15 @@ import React from "react";
 import './Header.css';
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+
 import SimpleModal from "../admincomponents/ModalComponent/SimpleModal";
 
-
-
-const Header = () => {
-
+const Header = (props) => {
+console.log(props.paths);
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
-  const [open, setOpen] = useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);}
-
+  
   return (
     <>
       <nav className="navbar">
@@ -35,22 +20,22 @@ const Header = () => {
             {/* <i className="fas fa-code"></i> */}
           </NavLink>
 
+            {props.paths==='/' || props.paths==='/signup'|| props.paths==='/login' || props.paths==='/admin'?<div></div>:
           <ul className={click ? "nav-menu active" : "nav-menu"}>
 
             <li className="nav-item">
               <NavLink
-                to="/"
+                to="/user"
                 className="nav-links"
                 onClick={handleClick}
               >
                 Home
               </NavLink>
             </li>
-           
             <li className="nav-item">
               <NavLink
 
-                to="/about"
+                to="/menu"
                 className="nav-links"
                 onClick={handleClick}
               >
@@ -58,20 +43,22 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-            <SimpleModal/>
-         
+              <SimpleModal/>
             </li>
-            
-
-          </ul>
+            {/* <li className="nav-item">
+              <NavLink
+              to="/chat"
+              className="nav-links"
+              onClick={handleClick}
+              >Chat with us</NavLink>
+            </li> */}
+          </ul>}
           <div className="nav-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
           </div>
         </div>
       </nav>
     </>
-
-
   );
 
 }

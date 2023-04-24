@@ -29,13 +29,17 @@ export default function UpdateItem() {
   const navigate = useNavigate();
 
 
-  const handleSubmit = async () => {
-    const response = await axios
+  const handleSubmit = () => {
+    axios
       .put(apikey, {
         descrption: itemDescription,
         url: itemUrl
       })
-      
+      .then((response) => {
+        console.log(response.data);
+        alert("Item updated succesfully!")
+        setResponse(response.data);
+      });
   };
   // if (!response) return "No post!"
 

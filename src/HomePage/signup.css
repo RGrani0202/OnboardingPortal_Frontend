@@ -1,4 +1,21 @@
- .incorrect{
+/* .format{
+    width: 50%;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+.signUpMain{
+  background-color: #FEFBE9;
+  padding: 5% auto;
+    margin-bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.incorrect{
     color: rgb(191, 39, 39);
     text-align: center;
     padding-bottom: 1%;
@@ -9,18 +26,21 @@
     padding-bottom: 1%;
   }
   
-  .loginPage{
+  .signupPage{
     /* background-color: white; */
     width: 50%;
-    margin: 5% auto;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+  
   
   }
   .size{
     margin:8% auto;
     width: 100%;
+    margin-bottom: 10px;
   }
   /* .size>div:focus{
     border:1px solid rgb(203, 42, 42) !important ;
@@ -51,3 +71,10 @@
   /* .MuiFormControl-root ,.css-1nrlq1o-MuiFormControl-root{
     border:1px solid rgb(203, 42, 42) !important ;
   } */
+  .nav-link {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    border-bottom: 3px solid transparent;
+    margin:2% auto;
+  }

@@ -3,22 +3,23 @@
     position: 'flex';
     flex-direction: column;
     padding: 0%;
-    max-width: 28%;
-    max-height: 77%;
+    max-width: 27%;
+    max-height: 80%;
     margin-top: 5rem;
-    margin-left: 50rem;
+    margin-left: 55rem;
     border-radius: 5px;
 }
 
-
-.btn-label{
+.btn-label {
     color: aliceblue;
     font-size: 18px;
 }
-.btn-header{
+
+.btn-header {
     background-color: transparent;
     border: none;
 }
+
 .paper {
     margin-top: 0rem;
     background-color: white;
@@ -58,14 +59,13 @@
 }
 
 .paper .p3 {
-    
     color: black;
     margin-top: 0.3rem;
     font-size: small;
 }
 
 .paper .span1 {
-    background-color:rgb(243, 245, 243);
+    background-color: rgb(243, 245, 243);
     color: black;
     border-radius: 20%;
     width: 50%;
@@ -81,10 +81,10 @@
 }
 
 .paper .div3 {
-    background-color:rgb(243, 245, 243);
+
+    background-color: rgb(243, 245, 243);
     margin-top: 0.5rem;
     margin-left: 2.5rem;
-   
     border-radius: 10px;
     width: 50%;
     height: 5%;
@@ -94,10 +94,10 @@
 
 .paper .div3 .span2 {
     color: black;
-    
 }
 
 .paper .div4 {
+
     background-color: rgb(243, 245, 243);
     margin-top: 0.5rem;
     margin-left: 2.5rem;
@@ -110,92 +110,98 @@
 
 .paper .div4 .span3 {
     color: black;
+
 }
 
-.paper .div5 {
-   
+/* .btn{
     max-width: 100%;
-    height: 6.7rem;
-  
-   
+    height: 7  rem;
+    background-color: transparent;
+    color: blue;
+} */
+
+/* .paper .div5 {
+    max-width: 100%;
+    height: 4rem;
+    border: blue;
+} */
+.div5 {
+    margin: 0;
+    padding: 10px;
 }
-.btn{
+
+.btn {
     margin-top: 0.5rem;
     margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    height: 1.3rem;
+    margin-bottom: 0rem;
+    /* margin-right: 0.5rem; */
+    height: 30%;
     border: 1px solid rgb(33, 33, 224);
     border-radius: 10px;
+    padding: 3px;
+    /* color:blue; */
+    background-color: transparent;
 }
-
-/*.paper .div5 .input1 {
-    margin-top: 7rem;
-    margin-left: 1rem;
-    width: 70%;
-    height: 30px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    background-color: rgb(240,241,243);
-}*/
-
-/*.paper .div5 .btn1 {
-    margin-left: 0.5rem;
-    width: 20%;
-    height: 32px;
-    background-color: rgb(79, 84, 247);
-    font-size: medium;
-    border-radius: 5px;
-    border: 0.5px solid;
-    color: #f9f6f6;
-}*/
-
-
-
 
 .paper .div6 .p {
     color: black;
 }
+
 .div1 {
     display: flex;
 }
 
 .btn2 {
     margin-left: 50px;
-    background-color:  #0F5FDC;
+    background-color: #0F5FDC;
     border: none;
-    color: rgb(8, 0, 0);
+    color: white;
     font-size: 15px;
 }
-.msg1{
+
+.msg1 {
     color: black;
     font-size: medium;
     margin-left: 1rem;
-    
 }
-.user{
-    float: right;
+
+.divbtn {
+    margin-left: 13rem;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+
+}
+
+.user {
     color: black;
     font-size: medium;
-    margin-top: -0.5rem;
 }
-.msg2{
+
+.msg2 {
     color: black;
     font-size: medium;
-    margin-top: 3rem;
-    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
 }
-.bodyChatbot{
-    
+
+.bodyChatbot {
     max-width: 100%;
     height: 250px;
     overflow: hidden;
     overflow-x: hidden;
     overflow-y: scroll;
-   
-    
-    
-   
 }
-.msg1{
+
+.msg1 {
     color: black;
 }
+
+.p1 {
+    color: black;
+    margin-left: 2rem;
+}
+/* .popupbox{
+    height: 700px !important;
+    width: 2045px !important;
+} */

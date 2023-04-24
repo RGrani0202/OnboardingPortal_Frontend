@@ -18,9 +18,9 @@ const Footer = () => {
 
   return (
     <footer className="footerDiv">
-      {/* <img className="footerLogo" src="https://www.mastercard.us/content/dam/public/mastercardcom/mea/za/logos/mc-logo-52.svg" alt="" /> */}
+      <img className="footerLogo" src="https://www.hcltech.com/sites/default/files/images/special-pages/supercharging-progress/supercharging-logo.svg" alt="" />
 
-      <p className="footerPara">HCLTech.</p>
+    
       <div className="footerShareIcon">
         <Link className="shareIcon"><TwitterIcon /></Link>
         <Link className="shareIcon"><FacebookIcon /></Link>

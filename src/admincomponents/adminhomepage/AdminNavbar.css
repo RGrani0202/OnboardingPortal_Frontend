@@ -78,7 +78,7 @@
 .adminPage {
   /* position: ; */
   height: 100%;
-background-color: rgb(96, 138, 235);
+background-color: rgb(43, 42, 42);
   /* margin: 80px auto; */
   width: 100%;
   display: flex;
@@ -87,15 +87,38 @@ background-color: rgb(96, 138, 235);
   align-items: center;
 }
 
+.img{
+  filter: blur(1px);
+   -webkit-filter: blur(1px);
+}
 .adminDiv1 {
   height: 100%;
-  width: 90%;
+  width: 100%;
+  text-align: center;
+background-color: white;
   /* margin-left: 0; */
-  background-image: url('C:\FE\NEW@FRONTEND\src\Assets\mainPage3.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit:contain ;
-  background-position: absolute;
+ 
+  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrfZtr7Xh7-wdDYasbdkFTCOHGi5kaaqa6rJ1JmHfoj2gsTEd3pyr6r-S__7f9ghZVNPNYY37nZDA&usqp=CAU&ec=48600112'); */
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8tT91qKgUpP9eVEQ_aYe0eSOjVxkhdzft9DI1FtmM6dgbjTHnhMzF2bU7tX1d4qZnhHmql19Am3A&usqp=CAU&ec=48600112');
+  /* background-repeat: no-repeat;
+  object-fit:cover; */
+  /* background-size:cover;
+  background-position: right;  */
+   /* Add the blur effect */
+   /* filter: blur(1px);
+   -webkit-filter: blur(1px); */
+ 
+   /* Full height */
+   height: 100%;
+ 
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size:cover;
+   display:flex;
+   flex-direction: row;
+   justify-content:space-around;
+   align-items: center;
 }
 
 .adminDiv2 {
@@ -108,7 +131,7 @@ background-color: rgb(96, 138, 235);
 }
 
 .adminButton>span {
-  color: rgb(10, 0, 0)  ;
+  color: rgb(54, 25, 133);
   font-family: 'Exo 2', sans-serif;
   font-size: 1.3rem;
   font-weight: bold;
@@ -116,13 +139,15 @@ background-color: rgb(96, 138, 235);
 
 .adminButton {
   /* margin: 10px auto !important; */
-  height: 33%;
-  width: 100%;
+  height: 20%;
+  width: 25%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(246, 245, 248, 0.308);
+ 
   /* margin-left: 0.5%;
   margin-right: 0.5%; */
   /* border: 2px solid white;s */
@@ -138,17 +163,18 @@ background-color: rgb(96, 138, 235);
 
 }
 
-.color1 {
-  background-color: rgb(173, 212, 240);
-  /* border: 2px 2px 0 2px solid white; */
-}
-
-.color2 {
-  background-color: rgb(142, 197, 240);
-  /* border: 10px solid white; */
+/* .color1 {
+  background-color: rgb(13, 135, 211);
+  
 }
 
 .color3 {
-  background-color: rgb(67, 164, 238);
-  /* border: 0 2px 2px 2px solid white; */
-}
+  background-color:  rgb(13, 135, 211);
+  
+} */
+
+/* .color2 {
+  background-color:  rgb(126, 185, 221); 
+  border-left: 10px solid rgba(66, 27, 144, 0);
+ 
+} */
