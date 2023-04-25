@@ -46,7 +46,7 @@ const SignUp = () => {
     console.log("saved");
     try {
       //pass items to store in database
-      const response = await axios.post(apikey, {
+       await axios.post(apikey, {
         userName: userName,
         email: email,
         password: newPassword,
