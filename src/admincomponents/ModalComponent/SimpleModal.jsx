@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Modal } from "@mui/material";
 import './Modal.css';
@@ -55,7 +55,9 @@ export default function SimpleModal() {
     const [curmsg, setcurrmsg] = useState();
     const [mssg, setMessage] = useState();
     const [button, setButton] = useState();
+    const [click,setClick]=useState([]);
     const [msg1, setMsg] = useState();
+    const [disappear,setDisappear]=useState(true);
     const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const d = new Date();
@@ -64,14 +66,34 @@ export default function SimpleModal() {
     const date = d.getDate();
     const year = d.getFullYear();
     const timeFormate = new Date()
-    const handleMessage = (value) => {
+    const handleMessage = value => {
         setButton(value);
         const res = data.map((element1) => {
             if (element1.query === value) {
-                setTimeout(() => { setMsg(element1.msg) }, 1000);
+                setTimeout(() => { setMsg(element1.msg) }, 500);
             }
         })
+        setTimeout(()=>{
+            setClick(()=>{
+                return (
+                    <div className="div6">
+                        <>
+                            <input className="ip1" type="text" placeholder=" Enter your message" />
+                            <button className="btnsnd"> Send </button>
+                        </>
+                    </div>
+                )
+            })
+        },1500)
+        setDisappear(false);
+        
     }
+    const Time = timeFormate.toLocaleString([], {
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true
+    })
+
     const listItems = data.map(
         (element) => {
             return (
@@ -79,81 +101,73 @@ export default function SimpleModal() {
                     {element.query}
                 </button>
             )
-        })
-    const Time = timeFormate.toLocaleString([], {
-        hour: 'numeric',
-        minute: 'numeric',
-        hour12: true
+        }
+    )
+
+    const [categories, setCategories] = useState([]);
+    useEffect(() => {
+        setTimeout(() => { setCategories(listItems) }, 6000)
     })
 
-
-//     setTimeout(() => {
-//         setMsg2("hi")
-//     }, 1000)
-//     setTimeout(() => {
-//         setMsg3("How can I help you")
-//     }, 2000)
-//     setTimeout(() => {
-//         setMsg4("Please select a option below to proceed ahead with your query")
-//     }, 3000)
-// };
-
-
-const handleOpen = () => {
-    setOpen(true);
-    const messages = msgs.map(
-        (element1) => {
-            setTimeout(() => {
-                if (element1.id === 1)
-                    setMessage(element1.msg)
-            }, 1000);
-            setTimeout(() => {
-                if (element1.id === 2)
-                    setprevmsg(element1.msg);
-            }, 2000);
-            setTimeout(() => {
-                if (element1.id === 3)
-                    setcurrmsg(element1.msg);
-            }, 3000);
-        })
-};
-return (
-    <div>
-        <button className="btn-header" onClick={handleOpen}>
-            <label className="btn-label">Chat With Us</label>
-        </button>
-        <Modal
-            className="modal"
-            open={open}
-            onClose={() => setOpen(true)}
-        >
-            <div className="paper">
-                <div className="div1">
-                    <div>
-                        <p className="p1">HCLTech Onboarding Support</p></div>
-                    <div>
-                        <button className="btn2" onClick={() => setOpen(false)}> X </button></div>
-                </div>
-                <div className="div2"><center><p className="p2">This is a Offline chat</p></center></div>
-                <center><p className="p3">
-                    {dtm}, {dt} {date} {year} {/*{hour}:{min} */} {Time}
-                </p></center>
-                <div className="bodyChatbot">
-                    <div>
-                        <p className="p1">{mssg}</p>
-                        <p className="p1">{prevmsg}</p>
-                        <p className="p1">{curmsg}</p>
+    const handleOpen = () => {
+        setOpen(true);
+        const messages = msgs.map(
+            (element1) => {
+                setTimeout(() => {
+                    if (element1.id === 1)
+                        setMessage(element1.msg)
+                }, 1000);
+                setTimeout(() => {
+                    if (element1.id === 2)
+                        setprevmsg(element1.msg);
+                }, 2000);
+                setTimeout(() => {
+                    if (element1.id === 3)
+                        setcurrmsg(element1.msg);
+                }, 3000);
+            })
+    };
+    return (
+        <div>
+            <button className="btn-header" onClick={handleOpen}>
+                <label className="btn-label">Chat With Us</label>
+            </button>
+            <Modal
+                className="modal"
+                open={open}
+                onClose={() => setOpen(true)}
+            >
+                <div className="paper">
+                    <div className="div1">
+                        <div>
+                            <p className="p1">HCLTech Onboarding Support</p></div>
+                        <div>
+                            <button className="btn2" onClick={() => setOpen(false)}> X </button></div>
                     </div>
-                    <div className="divbtn">
-                        <p className="user" id="btn">{button}</p></div>
-                    <p className="msg2 " id="user">{msg1}</p>
+                    <div className="div2"><center><p className="p2">This is a Offline chat</p></center></div>
+                    <center><p className="p3">
+                        {dtm}, {dt} {date} {year} {/*{hour}:{min} */} {Time}
+                    </p></center>
+                    <div className="bodyChatbot">
+                        <div>
+                            <p className="p1">{mssg}</p>
+                            <p className="p1">{prevmsg}</p>
+                            <p className="p1">{curmsg}</p>
+                        </div>
+                        <div className="divbtn">
+                            <p className="user" id="btn">{button}</p></div>
+                        <p className="msg2 " id="user">{msg1}</p>
+                    </div>
+                    <div>
+                        {/* <hr /> */}
+                        <div className="div5">{disappear? categories:null} {click}</div>
+                    </div>
+                    {/* <div className="div6">
+                    <input className="ip1" type="text" placeholder=" Enter your message"/>
+                    <button className="btnsnd"> Send </button>
+                </div> */}
                 </div>
-                <div>
-                    <hr />
-                    <div className="div5">{listItems}</div>
-                </div>
-            </div>
-        </Modal>
-    </div>
-);
+            </Modal>
+        </div>
+    );
 }
