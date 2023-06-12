@@ -1,0 +1,57 @@
+.format{
+    height: 100vh !important;
+}
+.commentCell {
+    max-width: 250px; /* Adjust the width as per your preference */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+
+    .sr {
+
+        height: 12px;
+    
+        align-items: center;
+    
+        padding-right: 5px;
+    
+        padding-left: 4px;
+    
+        width: 80px;
+    
+    }
+    
+    .issueType{
+    
+        height: 12px;
+    
+        align-items: center;
+    
+        padding-right: 5px;
+    
+        padding-left: 4px;
+    
+        width: 170px;
+    
+    }
+   
+    .commentCell:hover {
+    white-space: normal;
+    overflow: visible;
+    }
+    
+.item{
+    /* width:95%; */
+    display: flex;
+
+    justify-content:space-between;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    /* margin: 2% auto; */
+
+}
+  .status{
+
+    margin:2%;
+  }
